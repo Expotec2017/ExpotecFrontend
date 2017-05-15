@@ -1,22 +1,22 @@
 # ExpotecFrontend  
 
 ## Desenvolvimento  
-### Node version == v6.10.0.  
+#### Node version == v6.10.0.  
 
 Instale o Gulp e o Bower globalmente.  
-´´´npm install -g gulp bower´´´  
+```npm install -g gulp bower```  
 Instale os pacotes do node.  
-´´´npm install´´´  
+```npm install```  
 Instale os pacotes do Bower.  
-´´´bower install´´´  
+```bower install```  
 
 ## Como rodar o projeto  
 
 Iniciar o server:  
-´´´npm start´´´  
+```npm start```  
 
 Buildar o projeto:    
-´´´npm build´´´  
+```npm build```  
 
 Limpar o projeto:  
-´´´npm run clean´´´  
+```npm run clean```  
