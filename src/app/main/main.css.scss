@@ -1,0 +1,21 @@
+@import url(../assets/fonts/fonts.css);
+
+body{font-family: 'proximabld';}
+*{margin: 0;padding: 0;text-decoration: none;}
+section{min-height: 100vh;max-height: 100vh;}
+
+.column{float: left;}
+.column.one-second{width: 50%;}
+.container{width: 1060px;max-width: 100%;margin: 0 auto}
+.row{clear: both;display: block;width: 100%;float: left;}
+/*******************************************[Main]*************************************/
+#main{background: url(../assets/images/bgbody.jpg);background-attachment: fixed}
+#main header{padding: 55px 0}
+#main header #logo{color: #fff;font-weight: 900;font-size: 30px;line-height: 1.4em}
+#main header nav{text-align: right;padding: 11px 0}
+#main header nav a{color: #fff;text-decoration: none;text-transform: uppercase;
+letter-spacing: 1.5px}
+/*Detalhes*/
+#main #details{display: flex;align-items:center;flex-wrap:wrap;justify-content:center}
+#main #details h2{font-size: 90px;color: #fff;width: 100%;text-align: center;
+text-transform: uppercase;}
