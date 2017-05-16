@@ -1,65 +1,80 @@
 <section id="main">
-  <div>
-    <h2>Expotec {{vm.year}}</h2>
-    <p><strong>Date: </strong> 00/00/000</p>
-    <p><strong>Local: </strong> Univel (Av. Tito Muffato, 2317, Santa Cruz, Cascavel - PR, 85806-080)</p>
-    <button>Inscreva-se</button>
-    <button>Para baixo</button>
+  <div class="container">
+    <header>
+      <div class="row">
+        <div class="column one-second">
+          <a href="/" id="logo">EXPOTEC</a>
+        </div>
+        <div class="column one-second">
+          <nav>
+            <a href="#inscricao">Inscrição</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div id="details">
+      <h2>Expotec {{vm.year}}</h2>
+      <div class="data">
+      <p><strong>Date: </strong> 00/00/000</p>
+      <p><strong>Local: </strong> Univel (Av. Tito Muffato, 2317, Santa Cruz, Cascavel - PR, 85806-080)</p>
+      </div>
+      <button>Inscreva-se</button>
+    </div>
   </div>
 </section>
 
 <section id="subscription">
   <div>
     <h3>Inscrição</h3>
-    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+    <p>Realize agora a sua pré-inscrição em um dos maiores eventos estudantis da região. Expotec 2017</p>
 
     <form name="SubscriptionForm" ng-submit="vm.sendSubscription(subscription)">
       <div id="div_id_name">
           <label for="id_name">Nome Completo<span>*</span></label>
           <div>
-              <input ng-model="subscription.name" id="id_name" maxlength="255" name="name" type="text" />
+              <input ng-model="subscription.name" id="id_name" maxlength="255" name="name" type="text" placeholder="NOME COMPLETO" />
           </div>
       </div>
       <div id="div_id_document">
           <label for="id_document">CPF<span>*</span></label>
           <div>
-              <input ng-model="subscription.document" id="id_document" maxlength="255" name="document" type="text" />
+              <input ng-model="subscription.document" id="id_document" maxlength="255" name="document" type="text" placeholder="CPF" />
           </div>
       </div>
       <div id="div_id_zipcode">
           <label for="id_zipcode">CEP<span>*</span></label>
           <div>
-              <input ng-model="subscription.zipcode" id="id_zipcode" maxlength="255" name="zipcode" type="text" />
+              <input ng-model="subscription.zipcode" id="id_zipcode" maxlength="255" name="zipcode" type="text" placeholder="CEP" />
           </div>
       </div>
       <div id="div_id_city">
           <label for="id_city">Cidade<span>*</span></label>
           <div>
-              <input ng-model="subscription.city" id="id_city" maxlength="255" name="city" type="text" />
+              <input ng-model="subscription.city" id="id_city" maxlength="255" name="city" type="text" placeholder="CIDADE" />
           </div>
       </div>
       <div id="div_id_state">
           <label for="id_state">Estado<span>*</span></label>
           <div>
-              <input ng-model="subscription.state" id="id_state" maxlength="255" name="state" type="text" />
+              <input ng-model="subscription.state" id="id_state" maxlength="255" name="state" type="text" placeholder="ESTADO" />
           </div>
       </div>
       <div id="div_id_street">
           <label for="id_street">Logradouro<span>*</span></label>
           <div>
-              <input ng-model="subscription.street" id="id_street" maxlength="255" name="street" type="text" />
+              <input ng-model="subscription.street" id="id_street" maxlength="255" name="street" type="text" placeholder="ENDEREÇO" />
           </div>
       </div>
       <div id="div_id_email">
           <label for="id_email">E-mail<span>*</span></label>
           <div>
-              <input ng-model="subscription.email" id="id_email" maxlength="255" name="email" type="email" />
+              <input ng-model="subscription.email" id="id_email" maxlength="255" name="email" type="email" placeholder="E-MAIL" />
           </div>
       </div>
       <div id="div_id_phone">
           <label for="id_phone">Telefone<span>*</span></label>
           <div>
-              <input ng-model="subscription.phone" id="id_phone" maxlength="255" name="phone" type="text" />
+              <input ng-model="subscription.phone" id="id_phone" maxlength="255" name="phone" type="text" placeholder="TELEFONE" />
           </div>
       </div>
       <div id="div_id_another_college">
@@ -71,16 +86,16 @@
       <div id="div_id_college">
           <label for="id_college">Instituição</label>
           <div>
-              <input ng-model="subscription.college" id="id_college" maxlength="255" name="college" type="text" />
+              <input ng-model="subscription.college" id="id_college" maxlength="255" name="college" type="text" placeholder="INSTITUIÇÃO" />
           </div>
       </div>
       <div id="div_id_course">
           <label for="id_course">Curso</label>
           <div>
-              <input ng-model="subscription.course" id="id_course" maxlength="255" name="course" type="text" />
+              <input ng-model="subscription.course" id="id_course" maxlength="255" name="course" type="text" placeholder="CURSO" />
           </div>
       </div>
-      <button type="submit">Enviar</button>
+      <button type="submit">REALIZAR MINHA INSCRIÇÃO</button>
     </form>
   </div>
 </section>
