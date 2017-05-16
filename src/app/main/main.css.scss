@@ -1,21 +1,47 @@
 @import url(../assets/fonts/fonts.css);
 
-body{font-family: 'proximabld';}
-*{margin: 0;padding: 0;text-decoration: none;}
-section{min-height: 100vh;max-height: 100vh;}
+body{font-family: 'proximabld';background-color: #30302f}
+*{margin: 0;padding: 0;text-decoration: none;outline: 0}
 
 .column{float: left;}
 .column.one-second{width: 50%;}
 .container{width: 1060px;max-width: 100%;margin: 0 auto}
 .row{clear: both;display: block;width: 100%;float: left;}
+p{font-family: 'proximareg';}
 /*******************************************[Main]*************************************/
-#main{background: url(../assets/images/bgbody.jpg);background-attachment: fixed}
+#main{background: url(../assets/images/bgbody.jpg);background-attachment: fixed;
+min-height: 100vh;max-height: 100vh;}
 #main header{padding: 55px 0}
 #main header #logo{color: #fff;font-weight: 900;font-size: 30px;line-height: 1.4em}
 #main header nav{text-align: right;padding: 11px 0}
 #main header nav a{color: #fff;text-decoration: none;text-transform: uppercase;
 letter-spacing: 1.5px}
 /*Detalhes*/
-#main #details{display: flex;align-items:center;flex-wrap:wrap;justify-content:center}
+#main #details{display: flex;align-items:center;flex-wrap:wrap;justify-content:center;
+padding: 20vh 0}
 #main #details h2{font-size: 90px;color: #fff;width: 100%;text-align: center;
 text-transform: uppercase;}
+#main #details .data{width: 100%;}
+#main #details .data p{color: #fff;text-align: center;width: 410px;font-weight: 500;
+max-width: 100%;margin: 0 auto;font-size: 24px;}
+#main #details .data p strong{font-weight: bold}
+#main #details button{height: 34px;width: 147px;font-size: 18px;color: #282828;
+font-weight: bold;text-transform: uppercase;margin:35px 0}
+/*******************************************[Subscription]*****************************/
+#subscription{text-align: center;padding: 54px 0}
+#subscription h3{color: #fff;text-transform: uppercase;font-size: 50px;position: relative;
+display: inline-block;margin-bottom: 30px}
+#subscription h3:after{content: "";width: 70px;height: 6px;position: absolute;right: 0;
+background-color: #fff;display: block;}
+#subscription p{text-align: center;color: #fff;font-size: 24px;width: 648px;max-width: 100%;
+line-height: 1.4em;margin: 0 auto;margin-bottom: 25px}
+#subscription form{width: 630px;max-width: 100%;margin: 0 auto}
+#subscription form input{width: 100%;height: 50px;border: 2px solid #fff;
+background-color: transparent;margin: 7px 0;padding: 0 15px;display: block;
+box-sizing:border-box}
+#subscription form label{display: none;}
+#subscription form input::-webkit-input-placeholder{color: #fff;font-family: 'proximabld';
+font-size: 20px;letter-spacing: 1px}
+#subscription form button{background-color: ffffff;text-align: center;width: 100%;
+color: #30302f;font-size: 20px;height: 50px;font-family: 'proximabld';}
+#subscription #div_id_another_college{display: none;}
