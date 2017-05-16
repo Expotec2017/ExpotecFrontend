@@ -6,7 +6,7 @@
     "clean": "gulp clean",
     "start": "npm run dev",
     "dev": "gulp serve",
-    "build": "gulp build",
+    "build": "gulp clean && gulp build",
     "test": "gulp test"
   },
   "devDependencies": {
