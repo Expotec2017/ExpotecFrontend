@@ -30,34 +30,34 @@
 
     <form name="SubscriptionForm" ng-submit="vm.sendSubscription(subscription)">
       <div id="div_id_name">
-          <input ng-model="subscription.person.name" id="id_name" maxlength="255" name="name" type="text" placeholder="NOME COMPLETO" />
+          <input ng-model="subscription.person.name" id="id_name" maxlength="255" name="name" type="text" placeholder="NOME COMPLETO"  />
       </div>
       <div id="div_id_document">
-          <input ng-model="subscription.person.document" id="id_document" maxlength="255" name="document" type="text" placeholder="CPF" />
+          <input ng-model="subscription.person.document" id="id_document" maxlength="255" name="document" type="text" placeholder="CPF" ui-br-cpf-mask  />
       </div>
       <div id="div_id_email">
-          <input ng-model="subscription.person.email" id="id_email" maxlength="255" name="email" type="email" placeholder="E-MAIL" />
+          <input ng-model="subscription.person.email" id="id_email" maxlength="255" name="email" type="email" placeholder="E-MAIL"  />
       </div>
       <div id="div_id_zipcode">
-          <input ng-model="subscription.address.zipcode" id="id_zipcode" maxlength="255" name="zipcode" type="text" placeholder="CEP" />
+          <input ng-model="subscription.address.zipcode" id="id_zipcode" maxlength="255" name="zipcode" type="text" placeholder="CEP" ui-br-cep-mask  />
       </div>
       <div id="div_id_state">
-          <input ng-model="subscription.address.state" id="id_state" maxlength="255" name="state" type="text" placeholder="ESTADO" />
+          <input ng-model="subscription.address.state" id="id_state" maxlength="255" name="state" type="text" placeholder="ESTADO"  />
       </div>
       <div id="div_id_city">
-          <input ng-model="subscription.address.city" id="id_city" maxlength="255" name="city" type="text" placeholder="CIDADE" />
+          <input ng-model="subscription.address.city" id="id_city" maxlength="255" name="city" type="text" placeholder="CIDADE"  />
       </div>
       <div id="div_id_street">
-          <input ng-model="subscription.address.street" id="id_street" maxlength="255" name="street" type="text" placeholder="ENDEREÇO" />
+          <input ng-model="subscription.address.street" id="id_street" maxlength="255" name="street" type="text" placeholder="ENDEREÇO"  />
       </div>
       <div id="div_id_number">
-          <input ng-model="subscription.address.number" id="id_number" maxlength="255" name="number" type="text" placeholder="NUMERO" />
+          <input ng-model="subscription.address.number" id="id_number" maxlength="255" name="number" type="text" placeholder="NUMERO"  />
       </div>
       <div id="div_id_ddd">
-          <input ng-model="subscription.phone.ddd" id="id_ddd" maxlength="255" name="ddd" type="text" placeholder="DDD" />
+          <input ng-model="subscription.phone.ddd" id="id_ddd" maxlength="255" name="ddd" type="text" placeholder="DDD" ui-number-mask="3"  />
       </div>
-      <div id="div_id_number">
-          <input ng-model="subscription.phone.number" id="id_number" maxlength="255" name="number" type="text" placeholder="TELEFONE" />
+      <div id="div_id_phone">
+          <input ng-model="subscription.phone.number" id="id_number" maxlength="255" name="number" type="text" placeholder="TELEFONE" ui-br-phone-number  />
       </div>
       <div id="div_id_another_college">
           <label for="id_another_college">Você é aluno de alguma instituição ?</label>
