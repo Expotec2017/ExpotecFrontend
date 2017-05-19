@@ -25,8 +25,9 @@ text-transform: uppercase;}
 #main #details .data p{color: #fff;text-align: center;width: 410px;font-weight: 500;
 max-width: 100%;margin: 0 auto;font-size: 24px;}
 #main #details .data p strong{font-weight: bold}
-#main #details button{height: 34px;width: 147px;font-size: 18px;color: #282828;
-font-weight: bold;text-transform: uppercase;margin:35px 0}
+#main #details .button{height: 34px;width: 147px;font-size: 18px;color: #282828;
+font-weight: bold;text-transform: uppercase;margin:35px 0;background-color: #fff;
+text-align: center;line-height: 34px;}
 /*******************************************[Subscription]*****************************/
 #subscription{text-align: center;padding: 54px 0}
 #subscription h3{color: #fff;text-transform: uppercase;font-size: 50px;position: relative;
