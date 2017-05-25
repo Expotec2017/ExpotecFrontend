@@ -24,10 +24,10 @@
     }
 
     function getStreetByZipcode(zipcode) {
-      var url = BASE_URL.URL + '/street?zipcode=' + zipcode;
+      var url = BASE_URL.URL + '/zip/search/' + zipcode;
       return $http.get(url)
-        .then(function(result) { return result })
-        .catch(function(err) { return err });
+        .then(function(result) { return result.data; })
+        .catch(function(err) { return err; });
     }
   }
 })();

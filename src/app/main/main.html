@@ -29,7 +29,7 @@
     <h3>Inscrição</h3>
     <p>Realize agora a sua pré-inscrição em um dos maiores eventos estudantis da região. Expotec 2017</p>
 
-    <form name="SubscriptionForm" ng-submit="vm.sendSubscription(subscription)" novalidate>
+    <form name="vm.SubscriptionForm" ng-submit="vm.sendSubscription(subscription)" novalidate>
       <div id="div_id_name">
           <input ng-model="subscription.person.name" id="id_name" maxlength="255" name="name" type="text" placeholder="NOME COMPLETO" required/>
       </div>
@@ -51,14 +51,35 @@
             ui-br-cep-mask
             required />
       </div>
-      <div id="div_id_state">
-          <input ng-model="subscription.address.state" id="id_state" maxlength="255" name="state" type="text" placeholder="ESTADO" required/>
+      <!-- <div id="div_id_state">
+          <select
+            class="form-control"
+            name="view"
+            ng-model="subscription.address.state"
+            ng-options="state.id as state.name for state in vm.states"
+            ng-change="vm.getCities(subscription.address.state)">
+          </select>
       </div>
       <div id="div_id_city">
-          <input ng-model="subscription.address.city" id="id_city" maxlength="255" name="city" type="text" placeholder="CIDADE" required/>
+          <select
+            class="form-control"
+            name="view"
+            ng-model="subscription.address.city"
+            ng-options="city.id as city.name for city in vm.cities">
+          </select>
       </div>
       <div id="div_id_street">
           <input ng-model="subscription.address.street" id="id_street" maxlength="255" name="street" type="text" placeholder="ENDEREÇO" required/>
+      </div> -->
+
+      <div ng-repeat="address in vm.address" style="color: white">
+        <p>{{address.typeStreet.name}} {{address.street}}</p>
+        <p>{{address.neighborhood}} {{address.zipcode}}</p>
+        <p>{{address.city.name}} {{address.city.state.UF}}</p>
+      </div>
+
+      <div id="div_id_complement">
+          <input ng-model="subscription.address.complement" id="id_complement" maxlength="255" name="complement" type="text" placeholder="COMPLEMENTO" required/>
       </div>
       <div id="div_id_number">
           <input ng-model="subscription.address.number" id="id_number" maxlength="255" name="number" type="text" placeholder="NUMERO" required/>
