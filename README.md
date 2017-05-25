@@ -4,7 +4,7 @@
 #### Node version == v6.10.0.  
 
 Instale o Gulp e o Bower globalmente.  
-```npm install -g gulp bower```  
+```npm install -g gulp bower```  
 Instale os pacotes do node.  
 ```npm install```  
 Instale os pacotes do Bower.  
