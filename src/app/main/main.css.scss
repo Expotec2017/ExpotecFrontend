@@ -1,0 +1,69 @@
+// @import url(../assets/fonts/fonts.css);
+
+body{font-family: 'proximabld';background-color: #30302f}
+*{margin: 0;padding: 0;text-decoration: none;outline: 0}
+
+.column{float: left;}
+.column.one-second{width: 50%;}
+.container{width: 1060px;max-width: 100%;margin: 0 auto}
+.row{clear: both;display: block;width: 100%;float: left;}
+p{font-family: 'proximareg';}
+/*******************************************[Main]*************************************/
+#main{background: url(../assets/images/bgbody.jpg);background-attachment: fixed;
+min-height: 100vh;max-height: 100vh;}
+#main header{padding: 55px 0}
+#main header #logo{color: #fff;font-weight: 900;font-size: 30px;line-height: 1.4em}
+#main header nav{text-align: right;padding: 11px 0}
+#main header nav a{color: #fff;text-decoration: none;text-transform: uppercase;
+letter-spacing: 1.5px}
+/*Detalhes*/
+#main #details{display: flex;align-items:center;flex-wrap:wrap;justify-content:center;
+padding: 20vh 0}
+#main #details h2{font-size: 90px;color: #fff;width: 100%;text-align: center;
+text-transform: uppercase;}
+#main #details .data{width: 100%;}
+#main #details .data p{color: #fff;text-align: center;width: 410px;font-weight: 500;
+max-width: 100%;margin: 0 auto;font-size: 24px;}
+#main #details .data p strong{font-weight: bold}
+#main #details .button{height: 34px;width: 147px;font-size: 18px;color: #282828;
+font-weight: bold;text-transform: uppercase;margin:35px 0;background-color: #fff;
+text-align: center;line-height: 34px;}
+/*******************************************[Subscription]*****************************/
+#subscription{text-align: center;padding: 54px 0}
+#subscription h3{color: #fff;text-transform: uppercase;font-size: 50px;position: relative;
+display: inline-block;margin-bottom: 30px}
+#subscription h3:after{content: "";width: 70px;height: 6px;position: absolute;right: 0;
+background-color: #fff;display: block;}
+#subscription p{text-align: center;color: #fff;font-size: 24px;width: 648px;max-width: 100%;
+line-height: 1.4em;margin: 0 auto;margin-bottom: 25px}
+#subscription form{width: 630px;max-width: 100%;margin: 0 auto}
+#subscription form input{width: 100%;height: 50px;border: 2px solid #fff;
+background-color: transparent;margin: 4px 0;padding: 0 15px;display: block;
+box-sizing:border-box;color: #fff;font-size: 24px;font-weight: bold;font-family: 'proximabld';}
+#subscription form label{display: none;}
+#subscription form input::-webkit-input-placeholder{color: #fff;font-size: 24px;
+letter-spacing: 1px}
+#subscription form button{background-color: #ffffff;text-align: center;width: 100%;
+color: #30302f;font-size: 20px;height: 50px;font-family: 'proximabld';margin-top: 4px;
+border: 0;position: relative;overflow: hidden;z-index: 1}
+#subscription form button:before{content: '';position: absolute;top: 0;left: 0;width: 150%;
+height: 100%;background: #37474f;z-index: -1;
+-webkit-transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);-webkit-transform-origin: 0% 100%;
+transform-origin: 0% 100%;
+-webkit-transition: -webkit-transform 0.3s, opacity 0.3s, background-color 0.3s;
+transition: transform 0.3s, opacity 0.3s, background-color 0.3s;}
+#subscription form button:hover:before,#subscription form button:focus:before{
+    opacity: 1;
+    background-color: #d8d8d8;
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+    -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+#subscription #div_id_another_college{display: none;}
+#subscription #div_id_complement{width: 75%;}
+#subscription #div_id_number{width: 23%;margin-left: 12px;}
+#subscription #div_id_phone{width: 75%;}
+#subscription #div_id_ddd{width: 23%;margin-right: 12px;}
+#subscription div[id^="div_id"]{width: 100%;float: left;}
