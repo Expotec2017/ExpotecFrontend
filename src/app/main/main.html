@@ -14,7 +14,7 @@
       </div>
     </header>
     <div id="details">
-      <h2>Expotec {{vm.year}}</h2>
+      <h2>Expotec {{ vm.year }}</h2>
       <div class="data">
       <p><strong>Data: </strong> 00/00/000</p>
       <p><strong>Local: </strong> Univel (Av. Tito Muffato, 2317, Santa Cruz, Cascavel - PR, 85806-080)</p>
@@ -29,6 +29,10 @@
     <h3>Inscrição</h3>
     <p>Realize agora a sua pré-inscrição em um dos maiores eventos estudantis da região. Expotec 2017</p>
 
+    <div ng-if="vm.errors.errors !== undefined">
+      <p>Por favor preencha os campos abaixo</p>
+    </div>
+
     <form name="vm.SubscriptionForm" ng-submit="vm.sendSubscription(subscription)" novalidate>
       <div id="div_id_name">
           <input ng-model="subscription.person.name" id="id_name" maxlength="255" name="name" type="text" placeholder="NOME COMPLETO" required/>
@@ -41,8 +45,8 @@
       </div>
       <div id="div_id_zipcode">
           <input
-            ng-model="subscription.address.zipcode"
-            ng-change="vm.getAddress(subscription.address.zipcode)"
+            ng-model="subscription.address.zip"
+            ng-change="vm.getAddress(subscription.address.zip)"
             id="id_zipcode"
             maxlength="255"
             name="zipcode"
@@ -51,31 +55,10 @@
             ui-br-cep-mask
             required />
       </div>
-      <!-- <div id="div_id_state">
-          <select
-            class="form-control"
-            name="view"
-            ng-model="subscription.address.state"
-            ng-options="state.id as state.name for state in vm.states"
-            ng-change="vm.getCities(subscription.address.state)">
-          </select>
-      </div>
-      <div id="div_id_city">
-          <select
-            class="form-control"
-            name="view"
-            ng-model="subscription.address.city"
-            ng-options="city.id as city.name for city in vm.cities">
-          </select>
-      </div>
-      <div id="div_id_street">
-          <input ng-model="subscription.address.street" id="id_street" maxlength="255" name="street" type="text" placeholder="ENDEREÇO" required/>
-      </div> -->
 
-      <div ng-repeat="address in vm.address" style="color: white">
-        <p>{{address.typeStreet.name}} {{address.street}}</p>
-        <p>{{address.neighborhood}} {{address.zipcode}}</p>
-        <p>{{address.city.name}} {{address.city.state.UF}}</p>
+      <div ng-show="vm.show_address">
+        <p>{{ vm.address.zip.typeStreet.name }} {{ vm.address.zip.street }} - {{ vm.address.zip.neighborhood }}</p>
+        <p>{{ vm.address.zip.city.name }} - {{ vm.address.zip.city.state.name }}</p>
       </div>
 
       <div id="div_id_complement">
@@ -85,10 +68,10 @@
           <input ng-model="subscription.address.number" id="id_number" maxlength="255" name="number" type="text" placeholder="NUMERO" required/>
       </div>
       <div id="div_id_ddd">
-          <input ng-model="subscription.phone.ddd" id="id_ddd" maxlength="255" name="ddd" type="text" placeholder="DDD" ui-number-mask="3" required/>
+          <input ng-model="subscription.phone.ddd" id="id_ddd" maxlength="255" name="ddd" type="text" placeholder="DDD" required/>
       </div>
       <div id="div_id_phone">
-          <input ng-model="subscription.phone.number" id="id_number" maxlength="255" name="number" type="text" placeholder="TELEFONE" ui-br-phone-number required/>
+          <input ng-model="subscription.phone.number" id="id_number" maxlength="255" name="number" type="text" placeholder="TELEFONE" required/>
       </div>
       <div id="div_id_another_college">
           <label for="id_another_college">Você é aluno de alguma instituição ?</label>

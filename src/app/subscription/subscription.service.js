@@ -16,7 +16,7 @@
     return service;
 
     function createSubscription(object) {
-      var url = BASE_URL.URL + '/subscription';
+      var url = BASE_URL.URL + '/subscription/new';
       return $http.post(url, object);
     }
   }

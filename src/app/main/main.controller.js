@@ -11,41 +11,36 @@
   function MainController(SubscriptionService, StreetService, StateService, CityService) {
     var vm = this;
     vm.address = {};
+    vm.show_address = false;
     vm.states = {};
     vm.cities = {};
     vm.errors = {};
     vm.year = new Date().getFullYear();
     vm.sendSubscription = sendSubscription;
     vm.getAddress = getAddress;
-    vm.getCities = getCities;
 
     activate();
 
     function activate() {
-      getStates();
+
     }
 
     function sendSubscription(subscription) {
+      if (typeof vm.address.zip !== 'undefined') {
+        subscription.address.type_street = vm.address.zip.typeStreet.id;
+        subscription.address.street = vm.address.zip.street;
+        subscription.address.neighborhood = vm.address.zip.neighborhood;
+        subscription.address.city = vm.address.zip.city.id;
+      }
+
       SubscriptionService.createSubscription(subscription)
         .then(function (response) { console.log(response); })
-        .catch(function (err) { console.log(err); });
+        .catch(function (err) { vm.errors = err.data; });
     }
 
     function getAddress(zipcode) {
       StreetService.getStreetByZipcode(zipcode)
-        .then(function (result) { vm.address = result; vm.address.zip.zipcode = zipcode; })
-        .catch(function (err) { console.log(err); });
-    }
-
-    function getStates() {
-      StateService.getStates()
-        .then(function (result) { vm.states = result; })
-        .catch(function (err) { vm.errors = err; });
-    }
-
-    function getCities(state_id) {
-      CityService.getCitiesByState(state_id)
-        .then(function (result) { vm.cities = result; })
+        .then(function (result) { vm.address = result; vm.show_address = true; })
         .catch(function (err) { vm.errors = err; });
     }
   }
