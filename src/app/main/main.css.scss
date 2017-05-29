@@ -17,6 +17,10 @@ body {
 .column.one-second {
     width: 50%;
 }
+.column.one-forth{
+	width: 23%;
+	padding: 0 20px 0 0;
+}
 .container {
     width: 1060px;
     max-width: 100%;
@@ -29,7 +33,8 @@ body {
     float: left;
 }
 section {
-    min-height: 100vh
+    min-height: 100vh;
+    max-height: 100vh;
 }
 /********************************************[Header]**************************************/
 
@@ -157,3 +162,123 @@ header #button-subscription:focus {
     background-color: #fff;
     padding: 6px 21px;
 }
+/***********************************************[Sections]********************************/
+.header-title{
+	margin-bottom: 10px;
+}
+.header-title h2{
+	font-size: 43px;
+	line-height: 46px;
+	position: relative;
+	display: inline-block;
+}
+.header-title h2:after{
+	content: "";
+    display: block;
+    height: 8px;
+    width: 8px;
+    background: rgb(0, 153, 255);
+    border-radius: 50%;
+    position: absolute;
+    right: -15px;
+    bottom: 10px;
+}
+/***********************************************[Speakers]********************************/
+#speakers p{
+	font-weight: 100;
+	color: #a7a7a7;
+	font-family: 'proximareg';
+}
+#speakers{
+	padding: 20px 0;
+	overflow: hidden;
+}
+#speakers .row{
+	padding:30px 0
+}
+#speakers .speaker{
+	min-height: 230px;
+	position: relative;
+}
+#speakers .speaker .image-speaker{
+	height: 190px;
+	overflow: hidden;
+	display: block;
+}
+#speakers .speaker .image-speaker img{
+	transition:all 1.5s;
+	transform: scale(1);
+}
+#speakers .speaker .image-speaker img:hover{
+	transform: scale(1.5);
+}
+#speakers .speaker h2{
+	color: #333333;
+    font-size: 24px;
+    padding: 5px 0;
+    transition:all 1.5s;
+}
+#speakers .speaker h3{
+	font-size: 16px;
+	color: #a7a7a7;	
+	font-family: 'proximareg';
+	transition:all 1.5s;
+}
+#speakers .speaker:hover h2{
+	color: #0061a2;
+}
+/***********************************************[Subscription]***************************/
+#subscription p{
+	font-weight: 100;
+	color: #a7a7a7;
+	font-family: 'proximareg';
+}
+#subscription{
+	background: url(/assets/images/bg-section3.png) #fff;
+	background-size: cover;
+	background-position-x: 80%;
+	overflow: hidden;
+}
+#subscription form{
+	width: 530px;
+	margin: 15px 0;
+}
+#subscription form input{
+	width: 100%;
+	height: 35px;
+	border: 0;
+	color: #fff;
+	background-color: #2dabff;
+	margin: 5px 0;
+	padding: 10px;
+	box-sizing: border-box;
+	display: block;
+}
+#subscription form input::-webkit-input-placeholder{
+	color: #fff;
+}
+#subscription form label{
+	width: auto;
+	float: left;
+	margin-right: 10px;
+}
+#subscription form input[type="checkbox"]{
+	width: auto;
+	height: 20px;
+	display: block;
+}
+#subscription form button{
+    background-color: #0099ff;
+    color: #fff;
+    width: 100%;
+    height: 40px;
+    display: block;
+    line-height: 40px;
+    text-align: center;
+    font-size: 16px;
+    border: 0;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+/*******************************************[Footer]**********************************/
+footer{min-height: 120px;background-color: #0f1527;}

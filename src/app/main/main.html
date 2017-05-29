@@ -6,7 +6,7 @@
           <div class="column one">
             <a href="/" id="button-subscription">FAZER INSCRIÇÃO</a>
             <nav>
-              <a href="#" smooth-scroll="subscription" target="palestrantes">PALESTRANTES</a>
+              <a href="#" scroll-to="speakers">PALESTRANTES</a>
               <a href="/">PALESTRAS</a>
               <a href="/">MINI-CURSOS</a>
             </nav>
@@ -20,18 +20,135 @@
           <h1><span>EXPOTEC</span> 2017</h1>
           <p>Realize a sua inscrição na Expotec 2017 e participe de um dos maiores eventos estudantis da região.</p>
           <ul>
-            <li><a href="#">INSCREVA-SE</a></li>
+            <li><a href="#" scroll-to="subscription" container-id="subscription">INSCREVA-SE</a></li>
             <li><a href="#">O EVENTO</a></li>
           </ul>
         </div>
         <div class="details-right">
-          <h2>10, 11 e 12</h2>
+          <h2>9, 10, 11 e 12</h2>
           <span>de Agosto</span>
         </div>
       </div>
     </div>
   </section>
+  <section id="speakers">
+    <div class="container">
+      <div class="header-title">
+        <h2>Palestrantes</h2>
+      </div>
+      <p>Saiba mais sobre cada um dos palestrantes que estarão presente na Expotec 2017.</p>
+      <div class="row">
+        <div class="column one-forth">
+          <div class="speaker">
+            <a href="/" class="image-speaker">
+              <img src="assets/images/speakers/bruce_lawson.jpg">
+            </a>
+            <a href="/">
+              <h2>Bruce Lawson</h2>
+              <h3>Web Standards Love God</h3>
+            </a>
+          </div>
+        </div>                       
+        <div class="column one-forth">
+          <div class="speaker">
+            <a href="/" class="image-speaker">
+              <img src="assets/images/speakers/bruce_lawson.jpg">
+            </a>
+            <a href="/">
+              <h2>Bruce Lawson</h2>
+              <h3>Web Standards Love God</h3>
+            </a>
+          </div>
+        </div>  
+        <div class="column one-forth">
+          <div class="speaker">
+            <a href="/" class="image-speaker">
+              <img src="assets/images/speakers/bruce_lawson.jpg">
+            </a>
+            <a href="/">
+              <h2>Bruce Lawson</h2>
+              <h3>Web Standards Love God</h3>
+            </a>
+          </div>
+        </div>  
+        <div class="column one-forth">
+          <div class="speaker">
+            <a href="/" class="image-speaker">
+              <img src="assets/images/speakers/bruce_lawson.jpg">
+            </a>
+            <a href="/">
+              <h2>Bruce Lawson</h2>
+              <h3>Web Standards Love God</h3>
+            </a>
+          </div>
+        </div>      
+      </div>
+                     
+       
+      </div>
+    </div>
+  </section>
   <section id="subscription">
-    
+    <div class="container">
+      <div class="header-title">
+        <h2>Inscrição</h2>
+      </div>
+      <p>Realize agora a sua pré-inscrição em um dos maiores eventos estudantis da região. Expotec 2017</p>
+      <div ng-if="vm.errors.errors !== undefined">
+        <p>Por favor preencha os campos abaixo</p>
+      </div>
+      <form name="vm.SubscriptionForm" ng-submit="vm.sendSubscription(subscription)" novalidate>
+        <div id="div_id_name">
+            <input ng-model="subscription.person.name" id="id_name" maxlength="255" name="name" type="text" placeholder="NOME COMPLETO" required/>
+        </div>
+        <div id="div_id_document">
+            <input ng-model="subscription.person.document" id="id_document" maxlength="255" name="document" type="text" placeholder="CPF" ui-br-cpf-mask required/>
+        </div>
+        <div id="div_id_email">
+            <input ng-model="subscription.person.email" id="id_email" maxlength="255" name="email" type="email" placeholder="E-MAIL" required/>
+        </div>
+        <div id="div_id_zipcode">
+            <input
+              ng-model="subscription.address.zip"
+              ng-change="vm.getAddress(subscription.address.zip)"
+              id="id_zipcode"
+              maxlength="255"
+              name="zipcode"
+              type="text"
+              placeholder="CEP"
+              ui-br-cep-mask
+              required />
+        </div>
+        <div ng-show="vm.show_address">
+          <p>{{ vm.address.zip.typeStreet.name }} {{ vm.address.zip.street }} - {{ vm.address.zip.neighborhood }}</p>
+          <p>{{ vm.address.zip.city.name }} - {{ vm.address.zip.city.state.name }}</p>
+        </div>
+        <div id="div_id_complement">
+            <input ng-model="subscription.address.complement" id="id_complement" maxlength="255" name="complement" type="text" placeholder="COMPLEMENTO" required/>
+        </div>
+        <div id="div_id_number">
+            <input ng-model="subscription.address.number" id="id_number" maxlength="255" name="number" type="text" placeholder="NUMERO" required/>
+        </div>
+        <div id="div_id_ddd">
+            <input ng-model="subscription.phone.ddd" id="id_ddd" maxlength="255" name="ddd" type="text" placeholder="DDD" required/>
+        </div>
+        <div id="div_id_phone">
+            <input ng-model="subscription.phone.number" id="id_number" maxlength="255" name="number" type="text" placeholder="TELEFONE" required/>
+        </div>
+        <div id="div_id_another_college">
+            <label for="id_another_college">Você é aluno de alguma instituição ?</label>
+            <div>
+                <input ng-model="subscription.university.is_from_another_college" id="id_another_college" name="another_college" type="checkbox" ng-true-value="true" ng-false-value="false" />
+            </div>
+        </div>
+        <div id="div_id_college">
+            <input ng-model="subscription.university.college" id="id_college" maxlength="255" name="college" type="text" placeholder="INSTITUIÇÃO" />
+        </div>
+        <div id="div_id_course">
+            <input ng-model="subscription.university.course" id="id_course" maxlength="255" name="course" type="text" placeholder="CURSO" />
+        </div>
+        <button type="submit">REALIZAR MINHA INSCRIÇÃO</button>
+      </form>
+    </div>
   </section>
 </div>
