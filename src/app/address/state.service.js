@@ -5,20 +5,21 @@
     .module('expotec')
     .factory('StateService', StateService);
 
-  StateService.$inject = ['$http'];
+  StateService.$inject = ['$http', 'BASE_URL'];
 
   /* @ngInject */
-  function StateService($http) {
+  function StateService($http, BASE_URL) {
     var service = {
-      getState: getState
+      getStates: getStates
     };
 
     return service;
 
-    function getState() {
-      return $http.get()
-        .then(function() { })
-        .catch(function() { });
+    function getStates() {
+      var url = BASE_URL.URL + '/states';
+      return $http.get(url)
+        .then(function(result) { return result.data; })
+        .catch(function(err) { return err; });
     }
   }
 })();

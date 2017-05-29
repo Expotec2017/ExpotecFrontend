@@ -5,20 +5,21 @@
     .module('expotec')
     .factory('CityService', CityService);
 
-  CityService.$inject = ['$http'];
+  CityService.$inject = ['$http', 'BASE_URL'];
 
   /* @ngInject */
-  function CityService($http) {
+  function CityService($http, BASE_URL) {
     var service = {
-      getCityByState: getCityByState
+      getCitiesByState: getCitiesByState
     };
 
     return service;
 
-    function getCityByState(state_id) {
-      return $http.get()
-        .then(function() { })
-        .catch(function() { });
+    function getCitiesByState(state_id) {
+      var url = BASE_URL.URL + '/cities/' + state_id;
+      return $http.get(url)
+        .then(function(result) { return result.data; })
+        .catch(function(err) { return err; });
     }
   }
 })();
