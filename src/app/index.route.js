@@ -15,6 +15,13 @@
         controller: 'MainController',
         controllerAs: 'vm'
       });
+    $stateProvider
+      .state('finish_subscription', {
+        url: '/finish',
+        templateUrl: 'app/subscription/finish_subscription.html',
+        controller: 'FinishSubscriptionController',
+        controllerAs: 'vm'
+      });
 
     $urlRouterProvider.otherwise('/');
   }
