@@ -1,0 +1,18 @@
+<form name="vm.TokenForm" ng-submit="vm.updatePassword(token)" method="post">
+  <p ng-show="vm.errors.message">{{vm.errors.message}}</p>
+
+  <div id="div_id_password" class="form-group" ng-class="{'has-error': vm.errors.errors.password}">
+      <div class="controls">
+          <input ng-model="token.password" id="id_password" name="password" type="password" placeholder="SENHA"/>
+          <div ng-show="vm.errors.errors">
+              <p ng-repeat="error in vm.errors.errors.password" id="error_1_id_password" class="help-block"><strong>{{error}}</strong></p>
+          </div>
+      </div>
+  </div>
+
+  <div id="password_confirmation">
+      <input ng-model="token.password_confirmation" id="password_confirmation" maxlength="255" name="password_confirmation" type="password" placeholder="CONFIRMAR SENHA" required/>
+  </div>
+
+  <button type="submit">CONFIRMAR</button>
+</form>
