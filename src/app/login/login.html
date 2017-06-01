@@ -1,0 +1,17 @@
+<form name="vm.LoginForm" ng-submit="vm.login(login)" method="post">
+  <p class="has-error" ng-show="vm.errors.message">{{vm.errors.message}}</p>
+
+  <div id="div_id_document" class="form-group" ng-class="{'has-error': vm.errors.errors.document}">
+      <div class="controls">
+          <input ng-model="login.document" id="id_document" name="document" type="text" placeholder="DOCUMENTO"/>
+      </div>
+  </div>
+
+  <div id="div_id_password" class="form-group" ng-class="{'has-error': vm.errors.errors.password}">
+      <div class="controls">
+          <input ng-model="login.password" id="id_password" name="password" type="password" placeholder="SENHA"/>
+      </div>
+  </div>
+
+  <button type="submit">LOGIN</button>
+</form>

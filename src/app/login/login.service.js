@@ -5,18 +5,19 @@
     .module('expotec')
     .factory('LoginService', LoginService);
 
-  LoginService.$inject = ['$http'];
+  LoginService.$inject = ['$http', 'BASE_URL'];
 
   /* @ngInject */
-  function LoginService($http) {
+  function LoginService($http, BASE_URL) {
     var service = {
-      function: function
+      login: login
     };
 
     return service;
 
-    function function() {
-
+    function login(object) {
+      var url = BASE_URL.URL + '/login';
+      return $http.post(url, object);
     }
   }
 })();

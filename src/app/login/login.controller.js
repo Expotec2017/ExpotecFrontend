@@ -10,11 +10,13 @@
   /* @ngInject */
   function LoginController(LoginService) {
     var vm = this;
+    vm.errors = null;
+    vm.login = login;
 
-    activate();
-
-    function activate() {
-
+    function login(login) {
+      LoginService.login(login)
+        .then(function(result) { console.log(result); })
+        .catch(function(err) { vm.errors = err.data });
     }
   }
 })();

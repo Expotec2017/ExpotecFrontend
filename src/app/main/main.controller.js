@@ -5,10 +5,10 @@
     .module('expotec')
     .controller('MainController', MainController);
 
-  MainController.$inject = ['SubscriptionService', 'StreetService', 'StateService', 'CityService'];
+  MainController.$inject = ['SubscriptionService', 'StreetService'];
 
   /** @ngInject */
-  function MainController(SubscriptionService, StreetService, StateService, CityService) {
+  function MainController(SubscriptionService, StreetService) {
     var vm = this;
     vm.address = {};
     vm.show_address = false;
