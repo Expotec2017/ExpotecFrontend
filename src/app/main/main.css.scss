@@ -1,284 +1,185 @@
-body {
-    font-family: 'proximabld';
-    background-color: #ffffff;
+#main_page{
+    #main{
+        max-height: 88vh;
+        min-height: 88vh;
+    }
+    #infos_event {
+        min-height: 88vh;
+        background-image: url(/assets/images/bg-section1.png);
+        background-size: cover;
+    }
+    #infos_event .container{
+        display: flex;
+        min-height: 85vh;
+        align-items: center;
+        justify-content:center;
+    }
+    #infos_event .details_left {
+        width: 650px;
+        max-width: 100%;
+        float: left;
+    }
+    #infos_event .details_left h1 {
+        font-size: 80px;
+        color: $color-primary;
+    }
+    #infos_event .details_left h1 span {
+        color: $color-dark;
+        background-color: $color-primary;
+        padding: 0 13px;
+    }
+    #infos_event .details_left p {
+        color: $color-primary;
+        font-weight: bold;
+        font-size: 24px;
+        width: 645px;
+        max-width: 100%;
+        line-height: 1.3em;
+        letter-spacing: 0.8px;
+        margin: 10px 0
+    }
+    #infos_event .details_left ul {
+        list-style: none;
+        margin-top: 40px;
+    }
+    #infos_event .details_left ul li {
+        display: inline-block;
+    }
+    #infos_event .details_left ul li:first-child {
+        margin-right: 30px;
+    }
+    #infos_event .details_left ul li:first-child a {
+        background-color: $color-secundary;
+        color: $color-primary;
+        width: 260px;
+        height: 60px;
+        display: block;
+        line-height: 60px;
+        text-align: center;
+        font-size: 24px;
+    }
+    #infos_event .details_left ul li:last-child a {
+        background-color: $color-primary;
+        color: $color-dark;
+        width: 260px;
+        height: 60px;
+        display: block;
+        line-height: 60px;
+        text-align: center;
+        font-size: 24px;
+    }
+    #infos_event .details_right {
+        width: 320px;
+        max-width: 100%;
+        float: right;
+        text-align: center;
+        padding: 80px 0
+    }
+    #infos_event .details_right h2 {
+        background-color: $color-secundary;
+        color: $color-primary;
+        font-size: 40px;
+        text-align: center;
+        display: inline-block;
+        padding: 5px 40px;
+    }
+    #infos_event .details_right span {
+        font-size: 30px;
+        display: inline-block;
+        color: $color-dark;
+        background-color: $color-primary;
+        padding: 6px 21px;
+    }    
+    #speakers .row{
+        padding:25px 0
+    }
+    #speakers .speaker{
+        min-height: 230px;
+        position: relative;
+    }
+    #speakers .speaker .image_speaker{
+        height: 190px;
+        overflow: hidden;
+        display: block;
+    }
+    #speakers .speaker .image_speaker img{
+        transition:all 1.5s;
+        transform: scale(1);
+    }
+    #speakers .speaker .image_speaker img:hover{
+        transform: scale(1.5);
+    }
+    #speakers .speaker h2{
+        color: #333333;
+        font-size: 24px;
+        padding: 5px 0;
+        transition:all 1.5s;
+    }
+    #speakers .speaker h3{
+        font-size: 16px;
+        color: #a7a7a7;
+        font-family: 'proximareg';
+        transition:all 1.5s;
+    }
+    #speakers .speaker:hover h2{
+        color: #0061a2;
+    }
+    #subscription{
+        background: url(/assets/images/bgsubscription.jpg);
+        background-size: cover;
+        position: relative;
+    }
+    #subscription:after{
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        z-index: 1;
+    }
+    #subscription .container{
+        position: relative;
+        z-index: 2;
+    }
+    #subscription form{
+        padding:20px 0;
+        width: 470px;
+    }
+    #subscription form input:not([type='checkbox']){
+        width: 100%;
+        height: 33px;
+        margin: 3px 0;
+        padding: 0 9px;
+        color: #ffffff;
+        box-sizing: border-box;
+        background: #001c2f;
+        border: 0;
+    }
+    #subscription form input::-webkit-input-placeholder{
+        color: #ffffff;
+    }
+    #subscription form #div_id_another_college{
+        display: block;
+        float: left;
+        padding: 10px 0 8px 0;
+    }
+    #subscription form #div_id_another_college label{
+        float: left;
+    }
+    #subscription form #div_id_another_college div{
+        float: left;
+        margin: 1px 10px;
+    }
+    #subscription form button{
+        background: #002b48;
+        border: 0;
+        color: #fff;
+        height: 33px;
+        margin: 3px 0;
+        text-align: left;
+        padding: 0 10px;
+        float: right;
+    }
 }
-* {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    outline: 0
-}
-.column {
-    float: left;
-}
-.column.one {
-    width: 100%;
-}
-.column.one-second {
-    width: 50%;
-}
-.column.one-forth{
-	width: 23%;
-	padding: 0 20px 0 0;
-}
-.container {
-    width: 1060px;
-    max-width: 100%;
-    margin: 0 auto
-}
-.row {
-    clear: both;
-    display: block;
-    width: 100%;
-    float: left;
-}
-section {
-    min-height: 100vh;
-    max-height: 100vh;
-}
-/********************************************[Header]**************************************/
 
-header {
-    background-color: #ffffff;
-    height: 80px;
-    display: flex;
-    align-items: center
-}
-header nav {
-    padding: 0;
-    float: right;
-    position: relative;
-    margin-right: 75px;
-}
-header nav a {
-    color: #3f3f3f;
-    font-size: 20px;
-    font-weight: bold;
-    display: inline-block;
-    padding: 28px 10px 28px 8px;
-    border-right: 2px solid rgba(228, 228, 228, 0.7);
-}
-header nav a:last-child {
-    border-right: 0;
-}
-header #button-subscription {
-    color: #ffffff;
-    border-right: 0;
-    background-color: #0099ff;
-    float: right;
-    display: block;
-    padding: 28px 20px;
-    position: absolute;
-    right: 0;
-    font-size: 20px;
-    transition: all 1.5s;
-}
-header #button-subscription:hover,
-header #button-subscription:focus {
-    background-color: #0061a1;
-}
-/********************************************[Info Event]**************************************/
-#infos-event {
-    min-height: 88vh;
-    background-image: url(/assets/images/bg-section1.png);
-    background-size: cover;
-    height: 100%;
-    display: flex;
-    align-items: center
-}
-#infos-event .details-left {
-    width: 650px;
-    max-width: 100%;
-    float: left;
-}
-#infos-event .details-left h1 {
-    font-size: 80px;
-    color: #fff;
-}
-#infos-event .details-left h1 span {
-    color: #4f656a;
-    background-color: #ffffff;
-    padding: 0 13px;
-}
-#infos-event .details-left p {
-    color: #fff;
-    font-weight: bold;
-    font-size: 24px;
-    width: 645px;
-    max-width: 100%;
-    line-height: 1.3em;
-    letter-spacing: 0.8px;
-    margin: 10px 0
-}
-#infos-event .details-left ul {
-    list-style: none;
-    margin-top: 40px;
-}
-#infos-event .details-left ul li {
-    display: inline-block;
-}
-#infos-event .details-left ul li:first-child {
-    margin-right: 30px;
-}
-#infos-event .details-left ul li:first-child a {
-    background-color: #0099ff;
-    color: #fff;
-    width: 260px;
-    height: 60px;
-    display: block;
-    line-height: 60px;
-    text-align: center;
-    font-size: 24px;
-}
-#infos-event .details-left ul li:last-child a {
-    background-color: #ffffff;
-    color: #4f656a;
-    width: 260px;
-    height: 60px;
-    display: block;
-    line-height: 60px;
-    text-align: center;
-    font-size: 24px;
-}
-#infos-event .details-right {
-    width: 320px;
-    max-width: 100%;
-    float: right;
-    text-align: center;
-    padding: 80px 0
-}
-#infos-event .details-right h2 {
-    background-color: #0099ff;
-    color: #fff;
-    font-size: 40px;
-    text-align: center;
-    display: inline-block;
-    padding: 5px 40px;
-}
-#infos-event .details-right span {
-    font-size: 30px;
-    display: inline-block;
-    color: #3a3a3a;
-    background-color: #fff;
-    padding: 6px 21px;
-}
-/***********************************************[Sections]********************************/
-.header-title{
-	margin-bottom: 10px;
-}
-.header-title h2{
-	font-size: 43px;
-	line-height: 46px;
-	position: relative;
-	display: inline-block;
-}
-.header-title h2:after{
-	content: "";
-    display: block;
-    height: 8px;
-    width: 8px;
-    background: rgb(0, 153, 255);
-    border-radius: 50%;
-    position: absolute;
-    right: -15px;
-    bottom: 10px;
-}
-/***********************************************[Speakers]********************************/
-#speakers p{
-	font-weight: 100;
-	color: #a7a7a7;
-	font-family: 'proximareg';
-}
-#speakers{
-	padding: 20px 0;
-	overflow: hidden;
-}
-#speakers .row{
-	padding:30px 0
-}
-#speakers .speaker{
-	min-height: 230px;
-	position: relative;
-}
-#speakers .speaker .image-speaker{
-	height: 190px;
-	overflow: hidden;
-	display: block;
-}
-#speakers .speaker .image-speaker img{
-	transition:all 1.5s;
-	transform: scale(1);
-}
-#speakers .speaker .image-speaker img:hover{
-	transform: scale(1.5);
-}
-#speakers .speaker h2{
-	color: #333333;
-    font-size: 24px;
-    padding: 5px 0;
-    transition:all 1.5s;
-}
-#speakers .speaker h3{
-	font-size: 16px;
-	color: #a7a7a7;
-	font-family: 'proximareg';
-	transition:all 1.5s;
-}
-#speakers .speaker:hover h2{
-	color: #0061a2;
-}
-/***********************************************[Subscription]***************************/
-#subscription p{
-	font-weight: 100;
-	color: #a7a7a7;
-	font-family: 'proximareg';
-}
-#subscription{
-	background: url(/assets/images/bg-section3.png) #fff;
-	background-size: cover;
-	background-position-x: 80%;
-	overflow: hidden;
-}
-#subscription form{
-	width: 530px;
-	margin: 15px 0;
-}
-#subscription form input{
-	width: 100%;
-	height: 35px;
-	border: 0;
-	color: #fff;
-	background-color: #2dabff;
-	margin: 5px 0;
-	padding: 10px;
-	box-sizing: border-box;
-	display: block;
-}
-#subscription form input::-webkit-input-placeholder{
-	color: #fff;
-}
-#subscription form label{
-	width: auto;
-	float: left;
-	margin-right: 10px;
-}
-#subscription form input[type="checkbox"]{
-	width: auto;
-	height: 20px;
-	display: block;
-}
-#subscription form button{
-    background-color: #0099ff;
-    color: #fff;
-    width: 100%;
-    height: 40px;
-    display: block;
-    line-height: 40px;
-    text-align: center;
-    font-size: 16px;
-    border: 0;
-    font-weight: bold;
-    letter-spacing: 1.5px;
-}
-/*******************************************[Footer]**********************************/
-footer{min-height: 120px;background-color: #0f1527;}

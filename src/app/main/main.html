@@ -1,22 +1,8 @@
-<div smooth-scroll>
+<div smooth-scroll id="main_page">
   <section id="main">
-    <header>
+    <div id="infos_event">
       <div class="container">
-        <div class="row">
-          <div class="column one">
-            <a href="/" id="button-subscription">FAZER INSCRIÇÃO</a>
-            <nav>
-              <a href="#" scroll-to="speakers">PALESTRANTES</a>
-              <a href="/">PALESTRAS</a>
-              <a href="/">MINI-CURSOS</a>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </header>
-    <div id="infos-event">
-      <div class="container">
-        <div class="details-left">
+        <div class="details_left">
           <h1><span>EXPOTEC</span> 2017</h1>
           <p>Realize a sua inscrição na Expotec 2017 e participe de um dos maiores eventos estudantis da região.</p>
           <ul>
@@ -24,74 +10,72 @@
             <li><a href="#">O EVENTO</a></li>
           </ul>
         </div>
-        <div class="details-right">
+        <div class="details_right">
           <h2>9, 10, 11 e 12</h2>
           <span>de Agosto</span>
         </div>
       </div>
     </div>
   </section>
-<section id="speakers">
-  <div class="container">
-    <div class="header-title">
-      <h2>Palestrantes</h2>
+  <section id="speakers">
+    <div class="container">
+      <div class="header_title">
+        <h2>Palestrantes</h2>
+      </div>
+      <div class="row">
+        <div class="column one_forth">
+          <div class="speaker">
+            <a href="/" class="image_speaker">
+              <img src="assets/images/speakers/bruce_lawson.jpg">
+            </a>
+            <a href="/">
+              <h2>Bruce Lawson</h2>
+              <h3>Web Standards Love God</h3>
+            </a>
+          </div>
+        </div>
+        <div class="column one_forth">
+          <div class="speaker">
+            <a href="/" class="image_speaker">
+              <img src="assets/images/speakers/bruce_lawson.jpg">
+            </a>
+            <a href="/">
+              <h2>Bruce Lawson</h2>
+              <h3>Web Standards Love God</h3>
+            </a>
+          </div>
+        </div>
+        <div class="column one_forth">
+          <div class="speaker">
+            <a href="/" class="image_speaker">
+              <img src="assets/images/speakers/bruce_lawson.jpg">
+            </a>
+            <a href="/">
+              <h2>Bruce Lawson</h2>
+              <h3>Web Standards Love God</h3>
+            </a>
+          </div>
+        </div>
+        <div class="column one_forth">
+          <div class="speaker">
+            <a href="/" class="image_speaker">
+              <img src="assets/images/speakers/bruce_lawson.jpg">
+            </a>
+            <a href="/">
+              <h2>Bruce Lawson</h2>
+              <h3>Web Standards Love God</h3>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-    <p>Saiba mais sobre cada um dos palestrantes que estarão presente na Expotec 2017.</p>
-    <div class="row">
-      <div class="column one-forth">
-        <div class="speaker">
-          <a href="/" class="image-speaker">
-            <img src="assets/images/speakers/bruce_lawson.jpg">
-          </a>
-          <a href="/">
-            <h2>Bruce Lawson</h2>
-            <h3>Web Standards Love God</h3>
-          </a>
-        </div>
-      </div>
-      <div class="column one-forth">
-        <div class="speaker">
-          <a href="/" class="image-speaker">
-            <img src="assets/images/speakers/bruce_lawson.jpg">
-          </a>
-          <a href="/">
-            <h2>Bruce Lawson</h2>
-            <h3>Web Standards Love God</h3>
-          </a>
-        </div>
-      </div>
-      <div class="column one-forth">
-        <div class="speaker">
-          <a href="/" class="image-speaker">
-            <img src="assets/images/speakers/bruce_lawson.jpg">
-          </a>
-          <a href="/">
-            <h2>Bruce Lawson</h2>
-            <h3>Web Standards Love God</h3>
-          </a>
-        </div>
-      </div>
-      <div class="column one-forth">
-        <div class="speaker">
-          <a href="/" class="image-speaker">
-            <img src="assets/images/speakers/bruce_lawson.jpg">
-          </a>
-          <a href="/">
-            <h2>Bruce Lawson</h2>
-            <h3>Web Standards Love God</h3>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
   <section id="subscription">
     <div class="container">
-      <div class="header-title">
+      <div class="header_title">
         <h2>Inscrição</h2>
       </div>
-      <p>Realize agora a sua pré-inscrição em um dos maiores eventos estudantis da região. Expotec 2017</p>
       <div ng-if="vm.errors.errors !== undefined">
         <p>Por favor preencha os campos abaixo</p>
       </div>
