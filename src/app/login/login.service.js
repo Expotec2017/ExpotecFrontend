@@ -1,22 +1,22 @@
 (function() {
-    'use strict';
+  'use strict';
 
-    angular
-        .module('expotec')
-        .factory('LoginService', LoginService);
+  angular
+    .module('expotec')
+    .factory('LoginService', LoginService);
 
-    LoginService.$inject = ['$http'];
+  LoginService.$inject = ['$http'];
 
-    /* @ngInject */
-    function LoginService($http) {
-        var service = {
-            function: function
-        };
+  /* @ngInject */
+  function LoginService($http) {
+    var service = {
+      function: function
+    };
 
-        return service;
+    return service;
 
-        function function() {
+    function function() {
 
-        }
     }
+  }
 })();

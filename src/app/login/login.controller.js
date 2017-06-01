@@ -1,20 +1,20 @@
 (function() {
-    'use strict';
+  'use strict';
 
-    angular
-        .module('expotec')
-        .controller('LoginController', LoginController);
+  angular
+    .module('expotec')
+    .controller('LoginController', LoginController);
 
-    LoginController.$inject = ['LoginService'];
+  LoginController.$inject = ['LoginService'];
 
-    /* @ngInject */
-    function LoginController(LoginService) {
-        var vm = this;
+  /* @ngInject */
+  function LoginController(LoginService) {
+    var vm = this;
 
-        activate();
+    activate();
 
-        function activate() {
+    function activate() {
 
-        }
     }
+  }
 })();
