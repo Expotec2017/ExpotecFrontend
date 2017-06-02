@@ -15,7 +15,10 @@
 
     function login(login) {
       LoginService.login(login)
-        .then(function(result) { console.log(result); })
+        .then(function(result) {
+          localStorage.setItem('document', login.document);
+          localStorage.setItem('token', result.data.token);
+        })
         .catch(function(err) { vm.errors = err.data });
     }
   }
