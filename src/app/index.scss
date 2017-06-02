@@ -107,7 +107,7 @@ footer{
     float: left;
     width: 100%;
     text-align: center;
-    padding: 20px 0;
+    padding: 10px 0;
     color: #fff;
     position: absolute;
     bottom: 0;
@@ -158,7 +158,10 @@ footer{
     font-size: 18px;
     font-family: $font-regular;
 }
-
+.msg-error{
+    color: #F44336;
+    font-family: $font-bold !important;
+}
 /* Do not remove the comments below. It's the markers used by gulp-inject to inject
    all your sass files automatically */
 // injector
