@@ -15,7 +15,6 @@
         controller: 'MainController',
         controllerAs: 'vm'
       });
-
     $stateProvider
       .state('finish_subscription', {
         url: '/finish',
@@ -31,7 +30,13 @@
         controller: 'TokenSubscriptionController',
         controllerAs: 'vm'
       });
-
+    $stateProvider
+      .state('login', {
+        url: '/login',
+        templateUrl: 'app/login/login.html',
+        controller: 'LoginController',
+        controllerAs: 'vm'
+      });
     $urlRouterProvider.otherwise('/');
   }
 
