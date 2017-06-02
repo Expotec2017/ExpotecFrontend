@@ -16,6 +16,22 @@
         controllerAs: 'vm'
       });
 
+    $stateProvider
+      .state('finish_subscription', {
+        url: '/finish',
+        templateUrl: 'app/subscription/finish_subscription.html',
+        controller: 'FinishSubscriptionController',
+        controllerAs: 'vm'
+      });
+
+    $stateProvider
+      .state('token', {
+        url: '/token/:id/:token',
+        templateUrl: 'app/token/token.html',
+        controller: 'TokenSubscriptionController',
+        controllerAs: 'vm'
+      });
+
     $urlRouterProvider.otherwise('/');
   }
 
