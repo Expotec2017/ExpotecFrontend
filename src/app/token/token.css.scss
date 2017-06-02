@@ -1,0 +1,37 @@
+#token-page{
+	form{
+		width: 430px;
+		margin: 0 auto;
+		max-width: 100%;
+	}
+	form input{
+		width: 100%;
+		border:0;
+		box-sizing:border-box;
+	    background-color: #0d6fac;	
+		height: 40px;
+		margin: 3px 0;
+		padding: 0 10px;
+		color: $color-primary;
+		letter-spacing: 1px;
+		transition:all 1.5s;
+	}
+	form input:hover,form input:focus{
+		background: #064b75;
+	}
+	form input::-webkit-input-placeholder{
+		color: $color-primary;
+	}
+	form button{
+		cursor: pointer;
+		background-color: #FDD835;
+		border:0;
+		color: $color-primary;
+		padding: 0 10px;
+		height: 40px;
+		transition:all 1.5s;
+	}
+	form button:hover{
+		background: #ffb734;
+	}
+}
