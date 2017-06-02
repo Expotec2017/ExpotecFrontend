@@ -9,12 +9,6 @@
 
     /* @ngInject */
     function FinishSubscriptionController() {
-        var vm = this;
 
-        activate();
-
-        function activate() {
-
-        }
     }
 })();
