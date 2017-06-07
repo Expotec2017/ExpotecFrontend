@@ -22,8 +22,15 @@
     }
 
     function logout() {
-      localStorage.removeItem('token');
-      localStorage.removeItem('document');
+      var url = BASE_URL.URL + '/logout';
+      object['token'] = localStorage.getItem('token');
+      object['document'] = localStorage.getItem('document');
+
+      return $http.post(url, object)
+        .then(function() {
+          localStorage.removeItem('token');
+          localStorage.removeItem('document');
+        });
     }
   }
 })();

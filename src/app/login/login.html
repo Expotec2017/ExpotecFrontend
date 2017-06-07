@@ -1,17 +1,28 @@
-<form name="vm.LoginForm" ng-submit="vm.login(login)" method="post">
-  <p class="has-error" ng-show="vm.errors.message">{{vm.errors.message}}</p>
-
-  <div id="div_id_document" class="form-group" ng-class="{'has-error': vm.errors.errors.document}">
-      <div class="controls">
-          <input ng-model="login.document" id="id_document" name="document" type="text" placeholder="DOCUMENTO"/>
-      </div>
+<div smooth-scroll id="login-page">
+  <div class="header-inner">
+    <div class="container">
+      <h1>Login</h1>
+    </div>
   </div>
+  <div class="content">
+    <div class="container">
+      <form name="vm.LoginForm" ng-submit="vm.login(login)" method="post">
+        <p class="msg-error" ng-show="vm.errors.message">{{vm.errors.message}}</p>
 
-  <div id="div_id_password" class="form-group" ng-class="{'has-error': vm.errors.errors.password}">
-      <div class="controls">
-          <input ng-model="login.password" id="id_password" name="password" type="password" placeholder="SENHA"/>
-      </div>
+        <div id="div_id_document" class="form-group" ng-class="{'has-error': vm.errors.errors.document}">
+            <div class="controls">
+                <input ng-model="login.document" ui-br-cpf-mask required id="id_document" name="document" type="text" placeholder="DOCUMENTO"/>
+            </div>
+        </div>
+
+        <div id="div_id_password" class="form-group" ng-class="{'has-error': vm.errors.errors.password}">
+            <div class="controls">
+                <input ng-model="login.password" id="id_password" name="password" type="password" placeholder="SENHA"/>
+            </div>
+        </div>
+
+        <button type="submit">ACESSAR APLICAÇÃO</button>
+      </form>
+    </div>
   </div>
-
-  <button type="submit">LOGIN</button>
-</form>
+</div>

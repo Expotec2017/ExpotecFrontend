@@ -27,7 +27,7 @@
       password.token = token;
 
       TokenSubscriptionService.passwrodConfirmation(password)
-        .then(function(result) { console.log(result) })
+        .then(function(result) { })
         .catch(function(err) { vm.errors = err.data; });
     }
   }
