@@ -1,20 +1,28 @@
 (function() {
-    'use strict';
+  'use strict';
 
-    angular
-        .module('expotec')
-        .controller('PackagesController', PackagesController);
+  angular
+    .module('expotec')
+    .controller('PackagesController', PackagesController);
 
-    PackagesController.$inject = ['PackageService'];
+  PackagesController.$inject = ['PackageService'];
 
-    /* @ngInject */
-    function PackagesController(PackageService) {
-        var vm = this;
+  /* @ngInject */
+  function PackagesController(PackageService) {
+    var vm = this;
+    vm.errors = null;
+    vm.packages = null;
 
-        activate();
+    activate();
 
-        function activate() {
-
-        }
+    function activate() {
+      // getPackages();
     }
+
+    function getPackages() {
+      PackageService.getPackages()
+        .then(function(result) { vm.packages = result.data.return; })
+        .catch(function(err) { vm.errors = err; });
+    }
+  }
 })();
