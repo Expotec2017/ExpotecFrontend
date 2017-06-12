@@ -44,6 +44,13 @@
         controller: 'PackagesController',
         controllerAs: 'vm'
       });
+    $stateProvider
+      .state('cart', {
+        url: '/cart',
+        templateUrl: 'app/cart/cart.html',
+        controller: 'CartController',
+        controllerAs: 'vm'
+      });
     $urlRouterProvider.otherwise('/');
   }
 

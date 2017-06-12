@@ -15,7 +15,7 @@
 
     return service;
 
-    function getPackages(object) {
+    function getPackages() {
       var url = BASE_URL.URL + '/package/list';
       var object = {};
       object['token'] = localStorage.getItem('token');

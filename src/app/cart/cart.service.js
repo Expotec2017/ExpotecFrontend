@@ -10,17 +10,18 @@
   /* @ngInject */
   function CartService($http, BASE_URL) {
     var service = {
-      getCar: getCar,
-      
+      getCart: getCart
     };
 
     return service;
 
-    function  getCart() {
+    function getCart() {
       var url = BASE_URL + 'SOMETHING';
-      return $http.get(url)
-        .then(function(result) { return result.data; })
-        .catch(function(err) { return err; });
+      var object = {};
+      object['token'] = localStorage.getItem('token');
+      object['document'] = localStorage.getItem('document');
+
+      return $http.post(url, object);
     }
   }
 })();

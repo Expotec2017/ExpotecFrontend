@@ -16,7 +16,7 @@
     activate();
 
     function activate() {
-      // getPackages();
+      getPackages();
     }
 
     function getPackages() {
