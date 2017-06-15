@@ -5,10 +5,10 @@
     .module('expotec')
     .controller('LoginController', LoginController);
 
-  LoginController.$inject = ['LoginService'];
+  LoginController.$inject = ['LoginService', '$state'];
 
   /* @ngInject */
-  function LoginController(LoginService) {
+  function LoginController(LoginService, $state) {
     var vm = this;
     vm.errors = null;
     vm.login = login;
@@ -18,6 +18,8 @@
         .then(function(result) {
           localStorage.setItem('document', login.document);
           localStorage.setItem('token', result.data.token);
+          $state.go('packages');
+
         })
         .catch(function(err) { vm.errors = err.data });
     }
