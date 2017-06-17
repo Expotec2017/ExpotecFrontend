@@ -1,0 +1,27 @@
+#cart-page{
+	table{width: 700px;margin: 0 auto;max-width: 100%;text-align: center;border:0}
+	table th{background-color: #00578e;padding: 8px 0;color: #fff;}
+	table td{background-color: #004069;padding: 8px 0;color: #fff}
+	table button{font-family: $font-regular;background: none;border:none;color:#fff;
+		text-transform: uppercase;}
+	.details-cart{width: 700px;margin: 30px auto;max-width: 100%;}
+	.details-cart .btn-card{padding: 10px 30px;background: #00578e;float: left;
+	border: 0;color: #fff;text-transform: uppercase;font-weight: bold;width: 50%;
+	font-family: $font-regular;}
+	.details-cart .btn-boleto{padding: 10px 30px;background: #ece700;float: left;
+    border: 0;color: #000;text-transform: uppercase;font-weight: bold;width: 50%;
+	font-family: $font-regular;}
+	.details-cart ul{float: left;background: #ece700;width: 100%;margin: 20px  0 0 0;
+	list-style: none;padding: 20px;box-sizing: border-box;}
+	.details-cart .buy{background: #00578e;color: #fff;padding: 10px 20px;border: 0;
+	font-family: $font-regular;margin: 15px 0}
+	.details-cart form .form-group:nth-child(3),.details-cart form .form-group:nth-child(5){
+	margin-right: 0}
+	.details-cart form .form-group{margin: 10px 14px 0 0;float: left;width: 49%}
+	.details-cart form .form-group input{border:0;box-sizing:border-box;
+	background-color: #0d6fac;height: 40px;margin: 3px 0;padding: 0 10px;
+	color: $color-primary;letter-spacing: 1px;transition:all 1.5s;width: 100%}
+	.details-cart form input::-webkit-input-placeholder{color: $color-primary;}
+	.details-cart form select{background-color: #0d6fac;height: 40px;border:0;
+		color: #fff;width: 100%}
+}
