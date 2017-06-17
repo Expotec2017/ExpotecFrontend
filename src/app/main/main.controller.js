@@ -38,7 +38,7 @@
       }
 
       SubscriptionService.createSubscription(subscription)
-        .then(function () { $state.go('finish_subscription'); })
+        .then(function () { $state.go('app.finish_subscription'); })
         .catch(function (err) { vm.errors = err.data; });
     }
 
