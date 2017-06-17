@@ -28,13 +28,13 @@
     }
 
     function sendSubscription(subscription) {
-      if (typeof vm.address.zip !== 'undefined') {
+      if (typeof vm.address !== 'undefined') {
         if (vm.show_address) {
-          subscription.address.type_street = vm.address.zip.typeStreet.id;
-          subscription.address.street = vm.address.zip.street;
-          subscription.address.neighborhood = vm.address.zip.neighborhood;
+          subscription.address.type_street = vm.address.typeStreet.id;
+          subscription.address.street = vm.address.street;
+          subscription.address.neighborhood = vm.address.neighborhood;
         }
-        subscription.address.city = vm.address.zip.city.id;
+        subscription.address.city = vm.address.city.id;
       }
 
       SubscriptionService.createSubscription(subscription)
