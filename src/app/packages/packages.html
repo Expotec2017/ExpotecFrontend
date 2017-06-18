@@ -4,66 +4,20 @@
       <h1>Pacotes</h1>
     </div>
   </div>
+
   <div class="content">
     <div class="container">
-    	<div class="row">
-	    	<div class="column one-third">
+    	<div ng-repeat="package in vm.packages">
+        <div class="column one-third">
 		    	<div class="package">
-				  <p id="title">Lorem Ipsum</p>
-				  <p id="description">É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação.</p>
-				  <p id="price"><strong>Valor:</strong> R$50,00</p>
-				  <button id="btn-buy">Comprar</button>
-				  <button id="add-cart">Adicionar ao carrinho</button>  
+				  <p id="title">{{ package.name }}</p>
+				  <p id="description">{{ package.description }}</p>
+				  <p id="price"><strong>Valor:</strong> {{ package.value | currency:'R$' }}</p>
+				  <button id="btn-buy" ng-click="vm.buy(package.id)">Comprar</button>
+				  <button id="add-cart" ng-click="vm.add_cart(package.id)">Adicionar ao carrinho</button>
 			  	</div>
 		  	</div>
-	    	<div class="column one-third">
-		    	<div class="package">
-				  <p id="title">Lorem Ipsum</p>
-				  <p id="description">É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação.</p>
-				  <p id="price"><strong>Valor:</strong> R$50,00</p>
-				  <button id="btn-buy">Comprar</button>
-				  <button id="add-cart">Adicionar ao carrinho</button>  
-			  	</div>
-		  	</div>
-	    	<div class="column one-third">
-		    	<div class="package">
-				  <p id="title">Lorem Ipsum</p>
-				  <p id="description">É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação.</p>
-				  <p id="price"><strong>Valor:</strong> R$50,00</p>
-				  <button id="btn-buy">Comprar</button>
-				  <button id="add-cart">Adicionar ao carrinho</button>  
-			  	</div>
-		  	</div>
-	  	</div>
-    	<div class="row">
-	    	<div class="column one-third">
-		    	<div class="package">
-				  <p id="title">Lorem Ipsum</p>
-				  <p id="description">É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação.</p>
-				  <p id="price"><strong>Valor:</strong> R$50,00</p>
-				  <button id="btn-buy">Comprar</button>
-				  <button id="add-cart">Adicionar ao carrinho</button>  
-			  	</div>
-		  	</div>
-	    	<div class="column one-third">
-		    	<div class="package">
-				  <p id="title">Lorem Ipsum</p>
-				  <p id="description">É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação.</p>
-				  <p id="price"><strong>Valor:</strong> R$50,00</p>
-				  <button id="btn-buy">Comprar</button>
-				  <button id="add-cart">Adicionar ao carrinho</button>  
-			  	</div>
-		  	</div>
-	    	<div class="column one-third">
-		    	<div class="package">
-				  <p id="title">Lorem Ipsum</p>
-				  <p id="description">É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação.</p>
-				  <p id="price"><strong>Valor:</strong> R$50,00</p>
-				  <button id="btn-buy">Comprar</button>
-				  <button id="add-cart">Adicionar ao carrinho</button>  
-			  	</div>
-		  	</div>
-	  	</div>
+      </div>
     </div>
   </div>
 </div>

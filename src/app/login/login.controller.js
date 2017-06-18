@@ -18,7 +18,7 @@
         .then(function(result) {
           localStorage.setItem('document', login.document);
           localStorage.setItem('token', result.data.token);
-          $state.go('app.packages');
+          $state.go('packages');
 
         })
         .catch(function(err) { vm.errors = err.data });

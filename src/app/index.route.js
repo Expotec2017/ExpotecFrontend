@@ -9,14 +9,14 @@
   /** @ngInject */
   function router($stateProvider, $urlRouterProvider) {
     $stateProvider
-      .state('app.home', {
+      .state('home', {
         url: '/',
         templateUrl: 'app/main/main.html',
         controller: 'MainController',
         controllerAs: 'vm'
       });
     $stateProvider
-      .state('app.finish_subscription', {
+      .state('finish_subscription', {
         url: '/finish',
         templateUrl: 'app/subscription/finish_subscription.html',
         controller: 'FinishSubscriptionController',
@@ -24,28 +24,28 @@
       });
 
     $stateProvider
-      .state('app.token', {
+      .state('token', {
         url: '/token/:id/:token',
         templateUrl: 'app/token/token.html',
         controller: 'TokenSubscriptionController',
         controllerAs: 'vm'
       });
     $stateProvider
-      .state('app.login', {
+      .state('login', {
         url: '/login',
         templateUrl: 'app/login/login.html',
         controller: 'LoginController',
         controllerAs: 'vm'
       });
     $stateProvider
-      .state('app.packages', {
+      .state('packages', {
         url: '/packages',
         templateUrl: 'app/packages/packages.html',
         controller: 'PackagesController',
         controllerAs: 'vm'
       });
     $stateProvider
-      .state('app.cart', {
+      .state('cart', {
         url: '/cart',
         templateUrl: 'app/cart/cart.html',
         controller: 'CartController',

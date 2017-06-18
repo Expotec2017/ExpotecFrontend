@@ -30,7 +30,7 @@
     function sendSubscription(subscription) {
       if (typeof vm.address !== 'undefined') {
         if (vm.show_address) {
-          subscription.address.type_street = vm.address.typeStreet.id;
+          subscription.address.typeStreet = vm.address.typeStreet.id;
           subscription.address.street = vm.address.street;
           subscription.address.neighborhood = vm.address.neighborhood;
         }
@@ -38,7 +38,7 @@
       }
 
       SubscriptionService.createSubscription(subscription)
-        .then(function () { $state.go('app.finish_subscription'); })
+        .then(function () { $state.go('finish_subscription'); })
         .catch(function (err) { vm.errors = err.data; });
     }
 

@@ -11,7 +11,7 @@
           <table border="0" cellpadding="0" cellspacing="0">
             <thead>
               <tr>
-                <th>Description</th>
+                <th>Descição</th>
                 <th>Quantidade</th>
                 <th>Preço</th>
                 <th>Total</th>
@@ -19,19 +19,20 @@
             </thead>
             <tbody>
               <tr>
-                <td>Expotec Palestras</td>
-                <td>
-                  1
-                  <!--<button>Remover</button>-->
-                </td>
-                <td>30,00</td>
-                <td>30,00</td>
+                <td>{{vm.cart.package.nome}}</td>
+                <td>1</td>
+                <td>{{vm.cart.package.price | currency:'R$'}}</td>
+                <td>{{vm.cart.package.price | currency:'R$'}}</td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <div class="details-cart">
+          <button ng-click="vm.PagSeguro()" class="buy" ng-disabled="!vm.enable_buy_button">Pagar com PagSeguro</button>
+        </div>
+
+        <!-- <div class="details-cart">
           <button ng-click="vm.enableCard()" class="btn-card">Cartão de crédito</button>
           <button ng-click="vm.enableTicket()" class="btn-boleto">Boleto</button>
 
@@ -77,10 +78,8 @@
 
             <button type="submit" class="buy">COMPRAR COM BOLETO</button>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
 </div>
-
-
