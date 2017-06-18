@@ -1,0 +1,10 @@
+#package-page{
+	.content{min-height: 110vh}
+	.package{background-color: #dadada;padding: 30px;margin-bottom: 15px;}
+	.package #title{font-size: 28px;font-family: $font-bold}
+	.package #price{padding: 20px 0 5px 0;}
+	.package #btn-buy{margin: 15px 0 0 0;padding: 10px 30px;background: #00578e;
+	border: 0;color: #fff;text-transform: uppercase;font-weight: bold;width: 100%}
+	.package #add-cart{margin: 15px 0 0 0;padding: 10px 30px;background: #ece700;
+    border: 0;color: #000;text-transform: uppercase;font-weight: bold;width: 100%}
+}

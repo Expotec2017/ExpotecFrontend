@@ -31,18 +31,18 @@
             <a href="/"><img src="/assets/images/logo.png"></a>
           </div>
           <div class="column menu">
-            <a href="/" id="button_subscription">FAZER INSCRIÇÃO</a>
+            <a smooth-scroll target="subscription" id="button_subscription">FAZER INSCRIÇÃO</a>
             <nav>
-              <a href="/">PACOTES</a>
-              <a href="#" scroll-to="speakers">PALESTRANTES</a>
-              <a href="/">PALESTRAS</a>
-              <a href="/">MINI-CURSOS</a>
+              <!-- <a href="/">PACOTES</a> -->
+              <!-- <a smooth-scroll target="speakers">PALESTRANTES</a> -->
+              <!-- <a href="/">PALESTRAS</a> -->
+              <!-- <a href="/">MINI-CURSOS</a> -->
             </nav>
           </div>
         </div>
       </div>
     </header>
-    
+
     <div ui-view></div>
 
     <footer>
@@ -70,5 +70,8 @@
     <!-- angular templates will be automatically converted in js and inserted here -->
     <!-- endinject -->
     <!-- endbuild -->
+
+    <!-- <script type="text/javascript" src="https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js"></script> -->
+    <script type="text/javascript" src="https://stc.sandbox.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js"></script>
   </body>
 </html>

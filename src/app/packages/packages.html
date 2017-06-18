@@ -1,0 +1,23 @@
+<div smooth-scroll id="package-page">
+  <div class="header-inner">
+    <div class="container">
+      <h1>Pacotes</h1>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="container">
+    	<div ng-repeat="package in vm.packages">
+        <div class="column one-third">
+		    	<div class="package">
+				  <p id="title">{{ package.name }}</p>
+				  <p id="description">{{ package.description }}</p>
+				  <p id="price"><strong>Valor:</strong> {{ package.value | currency:'R$' }}</p>
+				  <button id="btn-buy" ng-click="vm.buy(package.id)">Comprar</button>
+				  <button id="add-cart" ng-click="vm.add_cart(package.id)">Adicionar ao carrinho</button>
+			  	</div>
+		  	</div>
+      </div>
+    </div>
+  </div>
+</div>

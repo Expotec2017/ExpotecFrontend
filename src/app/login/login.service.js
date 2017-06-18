@@ -23,6 +23,7 @@
 
     function logout() {
       var url = BASE_URL.URL + '/logout';
+      var object = {};
       object['token'] = localStorage.getItem('token');
       object['document'] = localStorage.getItem('document');
 

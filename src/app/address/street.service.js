@@ -11,7 +11,8 @@
   function StreetService($http, BASE_URL) {
     var service = {
       getStreetByNeighborhood: getStreetByNeighborhood,
-      getStreetByZipcode: getStreetByZipcode
+      getStreetByZipcode: getStreetByZipcode,
+      getTypeStreet: getTypeStreet
     };
 
     return service;
@@ -25,6 +26,13 @@
 
     function getStreetByZipcode(zipcode) {
       var url = BASE_URL.URL + '/zip/search/' + zipcode;
+      return $http.get(url)
+        .then(function(result) { return result.data; })
+        .catch(function(err) { return err; });
+    }
+
+    function getTypeStreet() {
+      var url = BASE_URL.URL + '/typestreet/list';
       return $http.get(url)
         .then(function(result) { return result.data; })
         .catch(function(err) { return err; });
