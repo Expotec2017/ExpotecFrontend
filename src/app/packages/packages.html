@@ -10,71 +10,31 @@
     		<div class="col s6">
     			<div class="item-pacote">
     				<h2>EXPOTEC</h2>
-    				<div class="package">
-    					<h3>Título do Pacote</h3>
-    					<p class="desc">É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação.</p>
-    					<p class="price"><strong>Valor: </strong>R$ 50,00</p>
+
+            <div class="package" ng-repeat="package in vm.packages.expotec">
+    					<h3>{{ package.name }}</h3>
+    					<p class="desc">{{ package.description }}</p>
+    					<p class="price"><strong>Valor: </strong>{{ package.value | currency:'R$' }}</p>
     					<ul>
-    						<li><button>Comprar</button></li>
+    						<li><button ng-click="vm.buy(package.id)">Comprar</button></li>
     					</ul>
     				</div>
-    				<div class="package">
-    					<h3>Título do Pacote</h3>
-    					<p class="desc">É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação.</p>
-    					<p class="price"><strong>Valor: </strong>R$ 50,00</p>
-    					<ul>
-    						<li><button>Comprar</button></li>
-    					</ul>
-    				</div>
-    				<div class="package">
-    					<h3>Título do Pacote</h3>
-    					<p class="desc">É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação.</p>
-    					<p class="price"><strong>Valor: </strong>R$ 50,00</p>
-    					<ul>
-    						<li><button>Comprar</button></li>
-    					</ul>
-    				</div>    				
     			</div>
     		</div>
     		<div class="col s6">
     			<div class="item-pacote">
     				<h2>CITIC</h2>
-    				<div class="package">
-    					<h3>Título do Pacote</h3>
-    					<p class="desc">É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação.</p>
-    					<p class="price"><strong>Valor: </strong>R$ 50,00</p>
+            <div class="package" ng-repeat="package in vm.packages.citic">
+    					<h3>{{ package.name }}</h3>
+    					<p class="desc">{{ package.description }}</p>
+    					<p class="price"><strong>Valor: </strong>{{ package.value | currency:'R$' }}</p>
     					<ul>
-    						<li><button>Comprar</button></li>
+    						<li><button ng-click="vm.buy(package.id)">Comprar</button></li>
     					</ul>
     				</div>
-    				<div class="package">
-    					<h3>Título do Pacote</h3>
-    					<p class="desc">É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação.</p>
-    					<p class="price"><strong>Valor: </strong>R$ 50,00</p>
-    					<ul>
-    						<li><button>Comprar</button></li>
-    					</ul>
-    				</div>
-    				<div class="package">
-    					<h3>Título do Pacote</h3>
-    					<p class="desc">É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação.</p>
-    					<p class="price"><strong>Valor: </strong>R$ 50,00</p>
-    					<ul>
-    						<li><button>Comprar</button></li>
-    					</ul>
-    				</div> 
     			</div>
     		</div>
     	</div>
     </div>
   </div>
 </div>
-<!-- 
-	    	<div class="package">
-				  <p id="title">Lorem Ipsum</p>
-				  <p id="description">É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação.</p>
-				  <p id="price"><strong>Valor:</strong> R$50,00</p>
-				  <button id="btn-buy">Comprar</button>
-				  <button id="add-cart">Adicionar ao carrinho</button>  
-			  	</div>
- -->
