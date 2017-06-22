@@ -1,10 +1,14 @@
 #package-page{
-	.content{min-height: 110vh}
-	.package{background-color: #dadada;padding: 30px;margin-bottom: 15px;}
-	.package #title{font-size: 28px;font-family: $font-bold}
-	.package #price{padding: 20px 0 5px 0;}
-	.package #btn-buy{margin: 15px 0 0 0;padding: 10px 30px;background: #00578e;
-	border: 0;color: #fff;text-transform: uppercase;font-weight: bold;width: 100%}
-	.package #add-cart{margin: 15px 0 0 0;padding: 10px 30px;background: #ece700;
-    border: 0;color: #000;text-transform: uppercase;font-weight: bold;width: 100%}
+	.content{background: linear-gradient(90deg, #e4e4e4 50%, #ffffff 50%);height: 100%;}
+	.item-pacote{padding: 30px 0;text-align: center;}
+	.item-pacote .package{padding: 30px;text-align: left;background: url(../assets/images/bgpackage.jpg);
+	margin:25px 0 0 0;min-height: 257px;background-size: cover;}
+	.item-pacote .package h3{font-size: 20px;font-weight: bold;color: $color-light	}
+	.item-pacote .package .desc{color: $color-light;}
+	.item-pacote .package .price{color: $color-light;}
+	.item-pacote .package .price strong{font-weight: bold;}
+	.item-pacote .package ul{list-style: none;margin-bottom: 0}
+	.item-pacote .package ul li{display: inline-block;}
+	.item-pacote .package ul li button{border:0;padding: 10px 40px;font-weight: bold;}
+	.item-pacote .package ul li:first-child button{background-color: $color-secundary;}
 }

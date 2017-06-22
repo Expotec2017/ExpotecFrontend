@@ -1,37 +1,32 @@
 #main_page{
     #main{
-        max-height: 88vh;
-        min-height: 88vh;
+        max-height: 92vh;
+        min-height: 92vh;
     }
     #infos_event {
-        min-height: 88vh;
-        background-image: url(/assets/images/bg-section1.png);
+        min-height: 92vh;
+        background:#ececec;
+        display: flex;
+        align-items: center;
+        background-image: url(/assets/images/bgexpotec.jpg);
         background-size: cover;
     }
-    #infos_event .container{
-        display: flex;
-        min-height: 85vh;
-        align-items: center;
-        justify-content:center;
-    }
     #infos_event .details_left {
-        width: 650px;
         max-width: 100%;
-        float: left;
     }
     #infos_event .details_left h1 {
         font-size: 80px;
-        color: $color-primary;
+        color: $color-light;
+        margin-bottom: 20px;
     }
     #infos_event .details_left h1 span {
-        color: $color-dark;
-        background-color: $color-primary;
+        color: $color-light;
+        background-color: $color-secundary;
         padding: 0 13px;
     }
     #infos_event .details_left p {
-        color: $color-primary;
-        font-weight: bold;
-        font-size: 24px;
+        color: $color-light;
+        font-size: 22px;
         width: 645px;
         max-width: 100%;
         line-height: 1.3em;
@@ -40,146 +35,86 @@
     }
     #infos_event .details_left ul {
         list-style: none;
-        margin-top: 40px;
+        margin: 20px 0;
     }
     #infos_event .details_left ul li {
         display: inline-block;
-    }
-    #infos_event .details_left ul li:first-child {
         margin-right: 30px;
     }
-    #infos_event .details_left ul li:first-child a {
-        background-color: $color-secundary;
-        color: $color-primary;
-        width: 260px;
-        height: 60px;
-        display: block;
-        line-height: 60px;
-        text-align: center;
-        font-size: 24px;
-    }
-    #infos_event .details_left ul li:last-child a {
-        background-color: $color-primary;
+    #infos_event .details_left ul li a {
+        background-color: $color-light;
         color: $color-dark;
-        width: 260px;
         height: 60px;
         display: block;
         line-height: 60px;
         text-align: center;
         font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+        padding: 0 25px;
+        transition:all 1.5s;
+    } 
+    #infos_event .details_left ul li a:hover{
+        background-color: $color-secundary;
     }
     #infos_event .details_right {
-        width: 320px;
         max-width: 100%;
-        float: right;
         text-align: center;
         padding: 80px 0
     }
     #infos_event .details_right h2 {
         background-color: $color-secundary;
-        color: $color-primary;
-        font-size: 40px;
+        color: $color-light;
+        font-size: 30px;
         text-align: center;
         display: inline-block;
         padding: 5px 40px;
     }
     #infos_event .details_right span {
-        font-size: 30px;
+        font-size: 25px;
         display: inline-block;
-        color: $color-dark;
+        color: $color-light;
         background-color: $color-primary;
         padding: 6px 21px;
     }    
-    #speakers .row{
-        padding:25px 0
+    #subscription #form-subscription{
+        width: 560px;
+        max-width: 100%;
+        margin: 0 auto;
+        margin-bottom: 40px;
     }
-    #speakers .speaker{
-        min-height: 230px;
-        position: relative;
+    #subscription #form-subscription .row{
+        margin-bottom: 0;
     }
-    #speakers .speaker .image_speaker{
-        height: 190px;
-        overflow: hidden;
-        display: block;
-    }
-    #speakers .speaker .image_speaker img{
-        transition:all 1.5s;
-        transform: scale(1);
-    }
-    #speakers .speaker .image_speaker img:hover{
-        transform: scale(1.5);
-    }
-    #speakers .speaker h2{
-        color: #333333;
-        font-size: 24px;
-        padding: 5px 0;
-        transition:all 1.5s;
-    }
-    #speakers .speaker h3{
-        font-size: 16px;
-        color: #a7a7a7;
-        font-family: 'proximareg';
-        transition:all 1.5s;
-    }
-    #speakers .speaker:hover h2{
-        color: #0061a2;
-    }
-    #subscription{
-        background: url(/assets/images/bgsubscription.jpg);
-        background-size: cover;
-        position: relative;
-    }
-    #subscription:after{
-        content: "";
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        top: 0;
-        z-index: 1;
-    }
-    #subscription .container{
-        position: relative;
-        z-index: 2;
-    }
-    #subscription form{
-        padding:20px 0;
-        width: 470px;
-    }
-    #subscription form input:not([type='checkbox']){
-        width: 100%;
-        height: 33px;
-        margin: 3px 0;
-        padding: 0 9px;
-        color: #ffffff;
-        box-sizing: border-box;
-        background: #001c2f;
-        border: 0;
-    }
-    #subscription form input::-webkit-input-placeholder{
-        color: #ffffff;
-    }
-    #subscription form #div_id_another_college{
-        display: block;
-        float: left;
-        padding: 10px 0 8px 0;
-    }
-    #subscription form #div_id_another_college label{
-        float: left;
-    }
-    #subscription form #div_id_another_college div{
-        float: left;
-        margin: 1px 10px;
-    }
-    #subscription form button{
-        background: #002b48;
-        border: 0;
-        color: #fff;
-        height: 33px;
-        margin: 3px 0;
-        text-align: left;
-        padding: 0 10px;
+    #subscription #form-subscription button{
+        margin: 20px auto 0 auto;
         float: right;
+        font-weight: 500;
+        letter-spacing: 1px;
+        background-color: $color-secundary;
+        border-radius: 0;
     }
+    form .input-field label {
+        color: $color-dark;
+    }
+    form .input-field input:focus + label {
+        color: $color-dark;
+    }
+    form .input-field input:focus {
+        border-bottom: 1px solid $color-dark;
+        box-shadow: 0 1px 0 0 $color-dark;
+    }
+    form .input-field input.valid {
+        border-bottom: 1px solid $color-error;
+        box-shadow: 0 1px 0 0 $color-error;
+    }
+    form .input-field input.invalid {
+        border-bottom: 1px solid $color-valid;
+        box-shadow: 0 1px 0 0 $color-valid;
+    }
+    form .input-field .prefix.active {
+        color: #000;
+    }
+        
 }
 
