@@ -21,9 +21,9 @@
   <section id="subscription">
     <div class="container">
       <h2 class="title">INSCRIÇÃO</h2>
-      <div id="form-subscription">
-        <div class="row">
-          <form class="col s12" name="vm.SubscriptionForm" ng-submit="vm.sendSubscription(subscription)" novalidate>
+      <form name="vm.SubscriptionForm" ng-submit="vm.sendSubscription(subscription)" novalidate>
+        <div class="col s12" id="form-subscription">
+          <div class="row">
             <div class="row">
               <div class="input-field col s12" id="div_id_name">
                 <input ng-model="subscription.person.name" id="id_name" maxlength="255" name="name" type="text" class="validate" required>
@@ -44,15 +44,15 @@
             </div>
             <div class="row">
               <div class="input-field col s12" id="div_id_zipcode">
-                <input
-                  ng-model="subscription.address.zip"
-                  ng-change="vm.getAddress(subscription.address.zip)"
-                  id="id_zipcode"
-                  maxlength="255"
-                  name="zipcode"
-                  type="text"
-                  ui-br-cep-mask
-                  required
+              <input
+                ng-model="subscription.address.zip"
+                ng-change="vm.getAddress(subscription.address.zip)"
+                id="id_zipcode"
+                maxlength="255"
+                name="zipcode"
+                type="text"
+                ui-br-cep-mask
+                required
                 />
                 <label for="id_zipcode" class="active">CEP</label>
               </div>
@@ -61,24 +61,23 @@
               <div ng-show="vm.show_type_address">
                 <div id="div_id_neighborhood" class="input-field col s6">
                   <select
-                    ng-model="subscription.address.typeStreet"
-                    ng-options="type_street.id as type_street.name for type_street in vm.type_street"
-                    class="form-control browser-default"
-                    name="type_street">
+                  ng-model="subscription.address.typeStreet"
+                  ng-options="type_street.id as type_street.name for type_street in vm.type_street"
+                  class="form-control browser-default"
+                  name="type_street">
                   </select>
                   <label for="id_type_street">Tipo da rua</label>
                 </div>
                 <div id="div_id_street" class="input-field col s6">
-                    <input ng-model="subscription.address.street" id="id_street" maxlength="255" name="street" type="text" class="validate" required/>
-                    <label class="active" for="id_street">Rua</label>
+                  <input ng-model="subscription.address.street" id="id_street" maxlength="255" name="street" type="text" class="validate" required/>
+                  <label class="active" for="id_street">Rua</label>
                 </div>
                 <div id="div_id_neighborhood" class="input-field col s12">
-                    <input ng-model="subscription.address.neighborhood" id="id_neighborhood" maxlength="255" name="neighborhood" type="text" class="validate" required/>
-                    <label class="active" for="id_neighborhood">Bairro</label>
+                  <input ng-model="subscription.address.neighborhood" id="id_neighborhood" maxlength="255" name="neighborhood" type="text" class="validate" required/>
+                  <label class="active" for="id_neighborhood">Bairro</label>
                 </div>
                 <p style="padding: 5% 2%">{{ vm.address.city.name }} - {{ vm.address.city.state.name }}</p>
               </div>
-            </div>
             </div>
 
             <div ng-show="vm.show_address">
@@ -88,12 +87,12 @@
 
             <div class="row">
               <div id="div_id_complement" class="input-field col s6">
-                  <input ng-model="subscription.address.complement" id="id_complement" maxlength="255" name="complement" type="text" class="validate" required/>
-                  <label class="active" for="id_complement">Complemento</label>
+                <input ng-model="subscription.address.complement" id="id_complement" maxlength="255" name="complement" type="text" class="validate" required/>
+                <label class="active" for="id_complement">Complemento</label>
               </div>
               <div id="div_id_number" class="input-field col s6">
-                  <input ng-model="subscription.address.number" id="id_number" maxlength="255" name="number" type="text" class="validate" required/>
-                  <label class="active" for="id_number">Numero</label>
+                <input ng-model="subscription.address.number" id="id_number" maxlength="255" name="number" type="text" class="validate" required/>
+                <label class="active" for="id_number">Numero</label>
               </div>
             </div>
             <div class="row">
@@ -115,37 +114,37 @@
             <div class="row">
               <div class="input-field col s12" id="div_id_college">
                 <input
-                  ng-disabled="!subscription.university.is_from_another_college"
-                   ng-model="subscription.university.college"
-                    id="id_college"
-                    maxlength="255"
-                    name="college"
-                    type="text"
-                    class="validate" />
+                ng-disabled="!subscription.university.is_from_another_college"
+                ng-model="subscription.university.college"
+                id="id_college"
+                maxlength="255"
+                name="college"
+                type="text"
+                class="validate" />
                 <label for="id_college" class="active">Instituição</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12" id="div_id_course">
                 <input
-                  ng-disabled="!subscription.university.is_from_another_college"
-                  ng-model="subscription.university.course"
-                  id="id_course"
-                  maxlength="255"
-                  name="course"
-                  type="text"
-                  class="validate" />
+                ng-disabled="!subscription.university.is_from_another_college"
+                ng-model="subscription.university.course"
+                id="id_course"
+                maxlength="255"
+                name="course"
+                type="text"
+                class="validate" />
                 <label for="id_course" class="active">Curso</label>
               </div>
             </div>
             <div class="row">
               <div class="col s12">
-                <button class="btn waves-effect waves-light" type="submit" name="action">INSCREVER-ME</button>
+                <button class="btn waves-effect waves-light" type="submit">INSCREVER-ME</button>
               </div>
             </div>
-          </form>
+          </div>
         </div>
-      </div>
+      </form>
     </div>
   </section>
 </div>
