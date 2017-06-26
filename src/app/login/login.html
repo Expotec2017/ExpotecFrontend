@@ -7,7 +7,9 @@
   <div class="content">
     <div class="container">
       <form name="vm.LoginForm" ng-submit="vm.login(login)" method="post">
-        <p class="msg-error" ng-show="vm.errors.message">{{vm.errors.message}}</p>
+        <div class="row errors">
+          <p class="msg-error" ng-show="vm.errors.message">{{vm.errors.message}}</p>
+        </div>
 
         <div class="row">
           <div class="input-field col s12" id="div_id_document" ng-class="{'has-error': vm.errors.errors.document}">
@@ -21,7 +23,7 @@
             <input ng-model="login.password" id="id_password" name="password" type="password">
             <label for="id_password" data-error="Dado incorreto" data-success="Dado correto" class="active">Senha</label>
           </div>
-        </div>  
+        </div>
 
         <button type="submit">REALIZAR LOGIN</button>
       </form>
