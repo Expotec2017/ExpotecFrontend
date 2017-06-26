@@ -13,7 +13,6 @@
     vm.errors = null;
     vm.packages = null;
     vm.buy = buy;
-    vm.add_cart = add_cart;
 
     activate();
 
@@ -32,14 +31,7 @@
 
     function buy(package_id) {
       CartService.addCart(package_id)
-        .then(function () { $state.go('cart'); })
-        .catch(function () {});
-    }
-
-    function add_cart(package_id) {
-      CartService.addCart(package_id)
-        .then(function () {})
-        .catch(function () {});
+        .then(function () { $state.go('cart'); });
     }
   }
 })();

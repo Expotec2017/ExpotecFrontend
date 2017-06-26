@@ -3,35 +3,37 @@
 		width: 430px;
 		margin: 0 auto;
 		max-width: 100%;
-	}
-	form input{
-		width: 100%;
-		border:0;
-		box-sizing:border-box;
-	    background-color: #0d6fac;	
-		height: 40px;
-		margin: 3px 0;
-		padding: 0 10px;
-		color: $color-primary;
-		letter-spacing: 1px;
-		transition:all 1.5s;
-	}
-	form input:hover,form input:focus{
-		background: #064b75;
-	}
-	form input::-webkit-input-placeholder{
-		color: $color-primary;
+		padding: 50px 0;
 	}
 	form button{
-		cursor: pointer;
-		background-color: #FDD835;
+		float: right;
+		background-color: $color-secundary;
 		border:0;
-		color: $color-primary;
-		padding: 0 10px;
-		height: 40px;
-		transition:all 1.5s;
+		padding: 10px 15px;
+		color:$color-dark;
+		letter-spacing: 1px;
+		font-weight: bold;
+		font-size: 14px;
 	}
-	form button:hover{
-		background: #ffb734;
-	}
+    form .input-field label {
+        color: $color-dark;
+    }
+    form .input-field input:focus + label {
+        color: $color-dark;
+    }
+    form .input-field input:focus {
+        border-bottom: 1px solid $color-dark;
+        box-shadow: 0 1px 0 0 $color-dark;
+    }
+    form .input-field input.valid {
+        border-bottom: 1px solid $color-error;
+        box-shadow: 0 1px 0 0 $color-error;
+    }
+    form .input-field input.invalid {
+        border-bottom: 1px solid $color-valid;
+        box-shadow: 0 1px 0 0 $color-valid;
+    }
+    form .input-field .prefix.active {
+        color: #000;
+    }
 }

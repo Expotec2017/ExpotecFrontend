@@ -7,17 +7,35 @@
 
   <div class="content">
     <div class="container">
-    	<div ng-repeat="package in vm.packages">
-        <div class="column one-third">
-		    	<div class="package">
-				  <p id="title">{{ package.name }}</p>
-				  <p id="description">{{ package.description }}</p>
-				  <p id="price"><strong>Valor:</strong> {{ package.value | currency:'R$' }}</p>
-				  <button id="btn-buy" ng-click="vm.buy(package.id)">Comprar</button>
-				  <button id="add-cart" ng-click="vm.add_cart(package.id)">Adicionar ao carrinho</button>
-			  	</div>
-		  	</div>
-      </div>
+    	<div class="row">
+    		<div class="col s6">
+    			<div class="item-pacote">
+    				<h2>EXPOTEC</h2>
+
+            <div class="package" ng-repeat="package in vm.packages.expotec">
+    					<h3>{{ package.name }}</h3>
+    					<p class="desc">{{ package.description }}</p>
+    					<p class="price"><strong>Valor: </strong>{{ package.value | currency:'R$' }}</p>
+    					<ul>
+    						<li><button ng-click="vm.buy(package.id)">Comprar</button></li>
+    					</ul>
+    				</div>
+    			</div>
+    		</div>
+    		<div class="col s6">
+    			<div class="item-pacote">
+    				<h2>CITIC</h2>
+            <div class="package" ng-repeat="package in vm.packages.citic">
+    					<h3>{{ package.name }}</h3>
+    					<p class="desc">{{ package.description }}</p>
+    					<p class="price"><strong>Valor: </strong>{{ package.value | currency:'R$' }}</p>
+    					<ul>
+    						<li><button ng-click="vm.buy(package.id)">Comprar</button></li>
+    					</ul>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
     </div>
   </div>
 </div>

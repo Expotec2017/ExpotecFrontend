@@ -18,40 +18,38 @@
     <!-- css files will be automatically insert here -->
     <!-- endinject -->
     <!-- endbuild -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <header>
+
+    <nav>
       <div class="container">
-        <div class="row">
-          <div class="column logo">
-            <a href="/"><img src="/assets/images/logo.png"></a>
-          </div>
-          <div class="column menu">
-            <a smooth-scroll target="subscription" id="button_subscription">FAZER INSCRIÇÃO</a>
-            <nav>
-              <!-- <a href="/">PACOTES</a> -->
-              <!-- <a smooth-scroll target="speakers">PALESTRANTES</a> -->
-              <!-- <a href="/">PALESTRAS</a> -->
-              <!-- <a href="/">MINI-CURSOS</a> -->
-            </nav>
-          </div>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">EXPOTEC</a>
+          
+          <a href="#" data-activates="mobile-demo" class="button-collapse" id="off-canvas"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/#packages">PACOTES</a></li>
+            <li id="action-subscription"><a href="#">FAZER INSCRIÇÃO</a></li>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <li><a href="/#packages">PACOTES</a></li>
+            <li id="action-subscription"><a href="#" smooth-scroll target="subscription">FAZER INSCRIÇÃO</a></li>
+          </ul>
         </div>
       </div>
-    </header>
+    </nav>
+
 
     <div ui-view></div>
 
-    <footer>
+    <footer class="page-footer">
       <div class="container">
-        <div class="row">
-          <div class="column one">
-            Desenvolvido por TADS 2017 - Univel
-          </div>
-        </div>
+        © TODOS OS DIREITOS RESERVADOS TADS UNIVEL - 5 SEMESTRE
       </div>
     </footer>
 

@@ -2,152 +2,153 @@
   <section id="main">
     <div id="infos_event">
       <div class="container">
-        <div class="details_left">
-          <h1><span>EXPOTEC</span> 2017</h1>
-          <p>Realize a sua inscrição na Expotec 2017 e participe de um dos maiores eventos estudantis da região.</p>
-          <ul>
-            <li><a smooth-scroll target="subscription">INSCREVA-SE</a></li>
-            <!--<li><a href="#">O EVENTO</a></li>-->
-          </ul>
-        </div>
-        <div class="details_right">
-          <h2>9, 10, 11 e 12</h2>
-          <span>de Agosto</span>
+        <div class="row">
+          <div class="details_left col s12">
+            <h1><span>EXPOTEC</span> 2017</h1>
+            <p>Realize a sua inscrição na Expotec 2017 e participe de um dos maiores eventos estudantis da região.</p>
+            <ul>
+              <li><a smooth-scroll target="subscription">INSCREVA-SE</a></li>
+            </ul>
+          </div>
+<!--           <div class="details_right col s4">
+            <h2>9, 10 e 11</h2>
+            <span>de Agosto</span>
+          </div> -->
         </div>
       </div>
     </div>
   </section>
-  <!--<section id="speakers">
-    <div class="container">
-      <div class="header_title">
-        <h2>Palestrantes</h2>
-      </div>
-      <div class="row">
-        <div class="column one_forth">
-          <div class="speaker">
-            <a href="/" class="image_speaker">
-              <img src="assets/images/speakers/bruce_lawson.jpg">
-            </a>
-            <a href="/">
-              <h2>Bruce Lawson</h2>
-              <h3>Web Standards Love God</h3>
-            </a>
-          </div>
-        </div>
-        <div class="column one_forth">
-          <div class="speaker">
-            <a href="/" class="image_speaker">
-              <img src="assets/images/speakers/bruce_lawson.jpg">
-            </a>
-            <a href="/">
-              <h2>Bruce Lawson</h2>
-              <h3>Web Standards Love God</h3>
-            </a>
-          </div>
-        </div>
-        <div class="column one_forth">
-          <div class="speaker">
-            <a href="/" class="image_speaker">
-              <img src="assets/images/speakers/bruce_lawson.jpg">
-            </a>
-            <a href="/">
-              <h2>Bruce Lawson</h2>
-              <h3>Web Standards Love God</h3>
-            </a>
-          </div>
-        </div>
-        <div class="column one_forth">
-          <div class="speaker">
-            <a href="/" class="image_speaker">
-              <img src="assets/images/speakers/bruce_lawson.jpg">
-            </a>
-            <a href="/">
-              <h2>Bruce Lawson</h2>
-              <h3>Web Standards Love God</h3>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>-->
-
   <section id="subscription">
     <div class="container">
-      <div class="header_title">
-        <h2>Inscrição</h2>
-      </div>
-      <div ng-if="vm.errors.errors !== undefined">
-        <p>Por favor preencha os campos abaixo</p>
-      </div>
+      <h2 class="title">INSCRIÇÃO</h2>
       <form name="vm.SubscriptionForm" ng-submit="vm.sendSubscription(subscription)" novalidate>
-        <div id="div_id_name">
-            <input ng-model="subscription.person.name" id="id_name" maxlength="255" name="name" type="text" placeholder="NOME COMPLETO" required/>
-        </div>
-        <div id="div_id_document">
-            <input ng-model="subscription.person.document" id="id_document" maxlength="255" name="document" type="text" placeholder="CPF" ui-br-cpf-mask required/>
-        </div>
-        <div id="div_id_email">
-            <input ng-model="subscription.person.email" id="id_email" maxlength="255" name="email" type="email" placeholder="E-MAIL" required/>
-        </div>
-        <div id="div_id_zipcode">
-            <input
-              ng-model="subscription.address.zip"
-              ng-change="vm.getAddress(subscription.address.zip)"
-              id="id_zipcode"
-              maxlength="255"
-              name="zipcode"
-              type="text"
-              placeholder="CEP"
-              ui-br-cep-mask
-              required />
-        </div>
-        <div ng-show="vm.show_type_address">
-          <div id="div_id_neighborhood">
-              <select
-                ng-model="subscription.address.typeStreet"
-                ng-options="type_street.id as type_street.name for type_street in vm.type_street"
-                class="form-control"
-                name="type_street">
-              </select>
+        <div class="col s12" id="form-subscription">
+
+          <div class="row" ng-if="">
+            <p>Preencha os campos obrigatórios</p>
           </div>
-          <div id="div_id_street">
-              <input ng-model="subscription.address.street" id="id_street" maxlength="255" name="street" type="text" placeholder="RUA" required/>
-          </div>
-          <div id="div_id_neighborhood">
-              <input ng-model="subscription.address.neighborhood" id="id_neighborhood" maxlength="255" name="neighborhood" type="text" placeholder="BAIRRO" required/>
-          </div>
-          <br/>
-          <p>{{ vm.address.city.name }} - {{ vm.address.city.state.name }}</p>
-        </div>
-        <div ng-show="vm.show_address">
-          <p>{{ vm.address.typeStreet.name }} {{ vm.address.street }} - {{ vm.address.neighborhood }}</p>
-          <p>{{ vm.address.city.name }} - {{ vm.address.city.state.name }}</p>
-        </div>
-        <div id="div_id_complement">
-            <input ng-model="subscription.address.complement" id="id_complement" maxlength="255" name="complement" type="text" placeholder="COMPLEMENTO" required/>
-        </div>
-        <div id="div_id_number">
-            <input ng-model="subscription.address.number" id="id_number" maxlength="255" name="number" type="text" placeholder="NUMERO" required/>
-        </div>
-        <div id="div_id_ddd">
-            <input ng-model="subscription.phone.ddd" id="id_ddd" maxlength="255" name="ddd" type="text" placeholder="DDD" required/>
-        </div>
-        <div id="div_id_phone">
-            <input ng-model="subscription.phone.number" id="id_number" maxlength="255" name="number" type="text" placeholder="TELEFONE" required/>
-        </div>
-        <div id="div_id_another_college">
-            <label for="id_another_college">Você é aluno de alguma instituição ?</label>
-            <div>
-                <input ng-model="subscription.university.is_from_another_college" id="id_another_college" name="another_college" type="checkbox" ng-true-value="true" ng-false-value="false" />
+
+          <div class="row">
+            <div class="row">
+              <div class="input-field col s12" id="div_id_name">
+                <input ng-model="subscription.person.name" id="id_name" maxlength="255" name="name" type="text" class="validate" required>
+                <label for="id_name" data-error="Dado incorreto" data-success="Dado correto" class="active">Nome Completo*</label>
+              </div>
             </div>
+            <div class="row">
+              <div class="input-field col s12" id="div_id_document">
+                <input ng-model="subscription.person.document" id="id_document" maxlength="255" name="document" type="text" class="validate" ui-br-cpf-mask required>
+                <label for="id_document" class="active">CPF*</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12" id="div_id_email">
+                <input ng-model="subscription.person.email" id="id_email" maxlength="255" name="email" type="email" class="validate" required>
+                <label class="active" for="id_email">E-mail*</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12" id="div_id_zipcode">
+              <input
+                ng-model="subscription.address.zip"
+                ng-change="vm.getAddress(subscription.address.zip)"
+                id="id_zipcode"
+                maxlength="255"
+                name="zipcode"
+                type="text"
+                ui-br-cep-mask
+                required
+                />
+                <label for="id_zipcode" class="active">CEP*</label>
+              </div>
+            </div>
+            <div class="row">
+              <div ng-show="vm.show_type_address">
+                <div id="div_id_neighborhood" class="input-field col s6">
+                  <select
+                  ng-model="subscription.address.typeStreet"
+                  ng-options="type_street.id as type_street.name for type_street in vm.type_street"
+                  class="form-control browser-default"
+                  name="type_street">
+                  </select>
+                  <label for="id_type_street">Tipo da rua*</label>
+                </div>
+                <div id="div_id_street" class="input-field col s6">
+                  <input ng-model="subscription.address.street" id="id_street" maxlength="255" name="street" type="text" class="validate" required/>
+                  <label class="active" for="id_street">Rua*</label>
+                </div>
+                <div id="div_id_neighborhood" class="input-field col s12">
+                  <input ng-model="subscription.address.neighborhood" id="id_neighborhood" maxlength="255" name="neighborhood" type="text" class="validate" required/>
+                  <label class="active" for="id_neighborhood">Bairro*</label>
+                </div>
+                <p style="padding: 5% 2%">{{ vm.address.city.name }} - {{ vm.address.city.state.name }}</p>
+              </div>
+            </div>
+
+            <div ng-show="vm.show_address">
+              <p>{{ vm.address.typeStreet.name }} {{ vm.address.street }} - {{ vm.address.neighborhood }}</p>
+              <p>{{ vm.address.city.name }} - {{ vm.address.city.state.name }}</p>
+            </div>
+
+            <div class="row">
+              <div id="div_id_complement" class="input-field col s6">
+                <input ng-model="subscription.address.complement" id="id_complement" maxlength="255" name="complement" type="text" class="validate" required/>
+                <label class="active" for="id_complement">Complemento*</label>
+              </div>
+              <div id="div_id_number" class="input-field col s6">
+                <input ng-model="subscription.address.number" id="id_number" maxlength="255" name="number" type="text" class="validate" required/>
+                <label class="active" for="id_number">Numero*</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s3" id="div_id_ddd">
+                <input ng-model="subscription.phone.ddd" id="id_ddd" maxlength="2" name="ddd" type="text" required />
+                <label for="id_ddd" class="active">DDD*</label>
+              </div>
+              <div class="input-field col s9" id="div_id_phone">
+                <input ng-model="subscription.phone.number" id="id_phone" maxlength="9" name="number" type="text" class="validate" required />
+                <label for="id_phone" class="active">Telefone*</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12" style="margin-bottom: 30px">
+                <input ng-model="subscription.university.is_from_another_college" id="id_another_college" name="another_college" type="checkbox" ng-true-value="true" ng-false-value="false" />
+                <label for="id_another_college">Sou um aluno de uma instituição</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12" id="div_id_college">
+                <input
+                ng-disabled="!subscription.university.is_from_another_college"
+                ng-model="subscription.university.college"
+                id="id_college"
+                maxlength="255"
+                name="college"
+                type="text"
+                class="validate" />
+                <label for="id_college" class="active">Instituição</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12" id="div_id_course">
+                <input
+                ng-disabled="!subscription.university.is_from_another_college"
+                ng-model="subscription.university.course"
+                id="id_course"
+                maxlength="255"
+                name="course"
+                type="text"
+                class="validate" />
+                <label for="id_course" class="active">Curso</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12">
+                <button class="btn waves-effect waves-light" type="submit">INSCREVER-ME</button>
+              </div>
+            </div>
+          </div>
         </div>
-        <div id="div_id_college">
-            <input ng-model="subscription.university.college" id="id_college" maxlength="255" name="college" type="text" placeholder="INSTITUIÇÃO" />
-        </div>
-        <div id="div_id_course">
-            <input ng-model="subscription.university.course" id="id_course" maxlength="255" name="course" type="text" placeholder="CURSO" />
-        </div>
-        <button type="submit">REALIZAR MINHA INSCRIÇÃO</button>
       </form>
     </div>
   </section>

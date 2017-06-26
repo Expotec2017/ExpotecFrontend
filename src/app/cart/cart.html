@@ -11,7 +11,7 @@
           <table border="0" cellpadding="0" cellspacing="0">
             <thead>
               <tr>
-                <th>Descição</th>
+                <th>Descrição</th>
                 <th>Quantidade</th>
                 <th>Preço</th>
                 <th>Total</th>
@@ -29,56 +29,13 @@
         </div>
 
         <div class="details-cart">
-          <button ng-click="vm.PagSeguro()" class="buy" ng-disabled="!vm.enable_buy_button">Pagar com PagSeguro</button>
+
+
+          <div class="botoes">
+            <button ng-click="vm.PagSeguro()" class="btn-top" ng-disabled="!vm.enable_buy_button">Pagar com PagSeguro</button>
+          </div>
+
         </div>
-
-        <!-- <div class="details-cart">
-          <button ng-click="vm.enableCard()" class="btn-card">Cartão de crédito</button>
-          <button ng-click="vm.enableTicket()" class="btn-boleto">Boleto</button>
-
-          <div ng-if="vm.card">
-            <form name="vm.CardForm" ng-submit="vm.buyCard(card)" method="post">
-              <p class="msg-error" ng-show="vm.errors.message">{{vm.errors.message}}</p>
-
-              <div id="div_id_number_card" class="form-group" ng-class="{'has-error': vm.errors.errors.number_card}">
-                <div class="controls">
-                  <input ng-model="card.number_card" ui-br-cpf-mask required id="id_number_card" name="number_card" type="text" placeholder="NUMERO DO CARTAO"/>
-                </div>
-              </div>
-
-              <div id="div_id_name_card" class="form-group" ng-class="{'has-error': vm.errors.errors.name_card}">
-                <div class="controls">
-                  <input ng-model="card.name_card" ui-br-cpf-mask required id="id_name_card" name="name_card" type="text" placeholder="NOME IMPRESSO NO CARTÃO"/>
-                </div>
-              </div>
-
-              <div id="div_id_month_card" class="form-group" ng-class="{'has-error': vm.errors.errors.month_card}">
-                <div class="controls">
-                  <select ng-model="card.month_card" ng-options="month for month in vm.month" class="form-control" name="month_card"></select>
-                </div>
-              </div>
-
-              <div id="div_id_year_card" class="form-group" ng-class="{'has-error': vm.errors.errors.year_card}">
-                <div class="controls">
-                  <select ng-model="card.year_card" ng-options="year for year in vm.year" class="form-control" name="year_card"></select>
-                </div>
-              </div>
-
-              <button type="submit" class="buy">COMPRAR COM CARTÃO DE CRÉDITO</button>
-            </form>
-          </div>
-
-          <div ng-if="vm.ticket">
-            <ul>
-              <li>IMPORTANTE: só emitimos boletos via PagSeguro. Confira os dados antes de pagá-lo.</li>
-              <li>Imprima o boleto e pague no banco</li>
-              <li>ou pague pela internet utilizando o código de barras do boleto</li>
-              <li>o prazo de validade do boleto é de 1 dia útil</li>
-            </ul>
-
-            <button type="submit" class="buy">COMPRAR COM BOLETO</button>
-          </div>
-        </div> -->
       </div>
     </div>
   </div>

@@ -39,7 +39,7 @@
 
       SubscriptionService.createSubscription(subscription)
         .then(function () { $state.go('finish_subscription'); })
-        .catch(function (err) { vm.errors = err.data; });
+        .catch(function (err) { vm.errors = err.data.errors; });
     }
 
     function getAddress(zipcode) {
@@ -52,7 +52,7 @@
           } else { vm.show_address = true; vm.show_type_address = false; }
           vm.address = result.zip;
         })
-        .catch(function (err) { vm.errors = err; });
+        .catch(function (err) { vm.errors = err.errors; });
     }
 
     function getTypeStreet() {
