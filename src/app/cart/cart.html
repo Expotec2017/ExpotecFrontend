@@ -11,7 +11,7 @@
           <table border="0" cellpadding="0" cellspacing="0">
             <thead>
               <tr>
-                <th>Description</th>
+                <th>Descrição</th>
                 <th>Quantidade</th>
                 <th>Preço</th>
                 <th>Total</th>
@@ -22,7 +22,6 @@
                 <td>Expotec Palestras</td>
                 <td>
                   1
-                  <!--<button>Remover</button>-->
                 </td>
                 <td>30,00</td>
                 <td>30,00</td>
@@ -32,10 +31,14 @@
         </div>
 
         <div class="details-cart">
-          <button ng-click="vm.enableCard()" class="btn-card">Cartão de crédito</button>
-          <button ng-click="vm.enableTicket()" class="btn-boleto">Boleto</button>
+
+          <div class="botoes">
+          <button ng-click="vm.enableCard()" class="btn-top">Cartão de crédito</button>
+          <button ng-click="vm.enableTicket()" class="btn-top">Boleto</button>
+          </div>
 
           <div ng-if="vm.card">
+            <div class="info-box">
             <form name="vm.CardForm" ng-submit="vm.buyCard(card)" method="post">
               <p class="msg-error" ng-show="vm.errors.message">{{vm.errors.message}}</p>
 
@@ -47,7 +50,7 @@
 
               <div id="div_id_name_card" class="form-group" ng-class="{'has-error': vm.errors.errors.name_card}">
                 <div class="controls">
-                  <input ng-model="card.name_card" ui-br-cpf-mask required id="id_name_card" name="name_card" type="text" placeholder="NOME IMPRESSO NO CARTÃO"/>
+                  <input ng-model="card.name_card" id="id_name_card" name="name_card" type="text" placeholder="NOME IMPRESSO NO CARTÃO"/>
                 </div>
               </div>
 
@@ -65,9 +68,11 @@
 
               <button type="submit" class="buy">COMPRAR COM CARTÃO DE CRÉDITO</button>
             </form>
+            </div>
           </div>
 
           <div ng-if="vm.ticket">
+            <div class="info-box">
             <ul>
               <li>IMPORTANTE: só emitimos boletos via PagSeguro. Confira os dados antes de pagá-lo.</li>
               <li>Imprima o boleto e pague no banco</li>
@@ -76,6 +81,7 @@
             </ul>
 
             <button type="submit" class="buy">COMPRAR COM BOLETO</button>
+            </div>
           </div>
         </div>
       </div>

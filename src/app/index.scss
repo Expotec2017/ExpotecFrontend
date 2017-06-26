@@ -98,6 +98,28 @@ footer.page-footer{
     font-weight: bold;
 }
 
+body form .input-field label {
+    color: $color-dark;
+}
+body form .input-field input:focus + label {
+    color: $color-dark;
+}
+body form .input-field input:focus {
+    border-bottom: 1px solid $color-dark;
+    box-shadow: 0 1px 0 0 $color-dark;
+}
+body form .input-field input.valid {
+    border-bottom: 1px solid $color-error;
+    box-shadow: 0 1px 0 0 $color-error;
+}
+body form .input-field input.invalid {
+    border-bottom: 1px solid $color-valid;
+    box-shadow: 0 1px 0 0 $color-valid;
+}
+body form .input-field .prefix.active {
+    color: #000;
+}
+
 /* Do not remove the comments below. It's the markers used by gulp-inject to inject
    all your sass files automatically */
 // injector
