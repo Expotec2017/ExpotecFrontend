@@ -19,12 +19,10 @@
             </thead>
             <tbody>
               <tr>
-                <td>Expotec Palestras</td>
-                <td>
-                  1
-                </td>
-                <td>30,00</td>
-                <td>30,00</td>
+                <td>{{vm.cart.package.nome}}</td>
+                <td>1</td>
+                <td>{{vm.cart.package.price | currency:'R$'}}</td>
+                <td>{{vm.cart.package.price | currency:'R$'}}</td>
               </tr>
             </tbody>
           </table>
@@ -83,10 +81,9 @@
             <button type="submit" class="buy">COMPRAR COM BOLETO</button>
             </div>
           </div>
+
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
