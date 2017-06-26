@@ -94,5 +94,14 @@
         background-color: $color-secundary;
         border-radius: 0;
     }
-        
+
+    .errors {
+        margin-bottom: 2em !important;
+    }
+
+    .errors p {
+        color: #e74f37;
+        font-size: 16px;
+        font-weight: 700;
+    }
 }

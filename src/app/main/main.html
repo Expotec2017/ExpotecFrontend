@@ -28,6 +28,14 @@
             <p>Preencha os campos obrigatórios</p>
           </div>
 
+          <div class="row errors">
+            <div ng-repeat="errors in vm.errors">
+              <div ng-repeat="error in errors">
+                <p>{{ error }}</p>
+              </div>
+            </div>
+          </div>
+
           <div class="row">
             <div class="row">
               <div class="input-field col s12" id="div_id_name">
@@ -93,7 +101,7 @@
             <div class="row">
               <div id="div_id_complement" class="input-field col s6">
                 <input ng-model="subscription.address.complement" id="id_complement" maxlength="255" name="complement" type="text" class="validate" required/>
-                <label class="active" for="id_complement">Complemento*</label>
+                <label class="active" for="id_complement">Complemento</label>
               </div>
               <div id="div_id_number" class="input-field col s6">
                 <input ng-model="subscription.address.number" id="id_number" maxlength="255" name="number" type="text" class="validate" required/>

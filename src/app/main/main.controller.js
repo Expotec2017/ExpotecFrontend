@@ -28,7 +28,7 @@
     }
 
     function sendSubscription(subscription) {
-      if (typeof vm.address !== 'undefined') {
+      if (typeof vm.address !== 'undefined' && typeof subscription !== 'undefined') {
         if (vm.show_address) {
           subscription.address.typeStreet = vm.address.typeStreet.id;
           subscription.address.street = vm.address.street;
