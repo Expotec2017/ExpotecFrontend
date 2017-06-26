@@ -1,7 +1,7 @@
 #package-page{
 	.content{background: linear-gradient(90deg, #e4e4e4 50%, #ffffff 50%);height: 100%;}
 	.item-pacote{padding: 30px 0;text-align: center;}
-	.item-pacote .package{padding: 30px;text-align: left;background: url(../assets/images/bgpackage.jpg);
+	.item-pacote .package{padding: 30px;text-align: left;background: $color-dark;
 	margin:25px 0 0 0;min-height: 257px;background-size: cover;}
 	.item-pacote .package h3{font-size: 20px;font-weight: bold;color: $color-light	}
 	.item-pacote .package .desc{color: $color-light;}

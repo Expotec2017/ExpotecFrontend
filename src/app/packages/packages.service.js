@@ -16,7 +16,7 @@
     return service;
 
     function getPackages() {
-      var url = BASE_URL.URL + '/package/list';
+      var url = BASE_URL.URL + '/package/listByEvent';
       var object = {};
       object['token'] = localStorage.getItem('token');
       object['document'] = localStorage.getItem('document');

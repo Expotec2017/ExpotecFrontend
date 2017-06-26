@@ -22,7 +22,7 @@
 
     function getPackages() {
       PackageService.getPackages()
-        .then(function(result) { vm.packages = result.data.return; })
+        .then(function(result) { vm.packages = result.data; })
         .catch(function(err) {
           vm.errors = err.data;
           if (err.data.message === 'Usuário deslogado.' && err.data.message !== null) { $state.go('login') }
