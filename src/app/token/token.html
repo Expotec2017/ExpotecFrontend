@@ -7,27 +7,28 @@
   <div class="content">
     <div class="container">
       <form name="vm.TokenForm" ng-submit="vm.updatePassword(token)" method="post">
-        <p ng-show="vm.errors.message" class="msg-error">{{vm.errors.message}}</p>
+        <div ng-show="vm.errors.password" class="row errors">
+          <p ng-repeat="error in vm.errors.password" class="msg-error">{{error}}</p>
+        </div>
 
         <div class="row">
           <div class="input-field col s12" id="div_id_password" ng-class="{'has-error': vm.errors.errors.password}">
             <input ng-model="token.password" id="id_password" name="password" type="password">
             <label for="id_password" data-error="Dado incorreto" data-success="Dado correto" class="active">Senha</label>
           </div>
-        </div>  
+        </div>
 
         <div class="row">
           <div class="input-field col s12" id="password_confirmation" ng-class="{'has-error': vm.errors.errors.password}">
             <input ng-model="token.password_confirmation" id="password_confirmation" name="password" type="password">
             <label for="password_confirmation" data-error="Dado incorreto" data-success="Dado correto" class="active">Senha</label>
           </div>
-        </div>  
+        </div>
 
         <button type="submit">CONFIRMAR</button>
-        
+
       </form>
 
     </div>
   </div>
 </div>
-

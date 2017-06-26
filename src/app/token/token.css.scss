@@ -15,25 +15,34 @@
 		font-weight: bold;
 		font-size: 14px;
 	}
-    form .input-field label {
-        color: $color-dark;
-    }
-    form .input-field input:focus + label {
-        color: $color-dark;
-    }
-    form .input-field input:focus {
-        border-bottom: 1px solid $color-dark;
-        box-shadow: 0 1px 0 0 $color-dark;
-    }
-    form .input-field input.valid {
-        border-bottom: 1px solid $color-error;
-        box-shadow: 0 1px 0 0 $color-error;
-    }
-    form .input-field input.invalid {
-        border-bottom: 1px solid $color-valid;
-        box-shadow: 0 1px 0 0 $color-valid;
-    }
-    form .input-field .prefix.active {
-        color: #000;
-    }
+  form .input-field label {
+      color: $color-dark;
+  }
+  form .input-field input:focus + label {
+      color: $color-dark;
+  }
+  form .input-field input:focus {
+      border-bottom: 1px solid $color-dark;
+      box-shadow: 0 1px 0 0 $color-dark;
+  }
+  form .input-field input.valid {
+      border-bottom: 1px solid $color-error;
+      box-shadow: 0 1px 0 0 $color-error;
+  }
+  form .input-field input.invalid {
+      border-bottom: 1px solid $color-valid;
+      box-shadow: 0 1px 0 0 $color-valid;
+  }
+  form .input-field .prefix.active {
+      color: #000;
+  }
+  .errors {
+      margin-bottom: 2em !important;
+      margin-left: 0.2em !important;
+  }
+  .errors p {
+      color: #e74f37;
+      font-size: 16px;
+      font-weight: 700;
+  }
 }

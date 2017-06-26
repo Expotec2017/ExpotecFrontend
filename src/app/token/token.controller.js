@@ -23,12 +23,13 @@
     }
 
     function updatePassword(password) {
+      if (typeof password === 'undefined') { var password = {}; }
       password.id = id;
       password.token = token;
 
       TokenSubscriptionService.passwrodConfirmation(password)
         .then(function () { $state.go('login'); })
-        .catch(function(err) { vm.errors = err.data; });
+        .catch(function(err) { vm.errors = err.data.errors; });
     }
   }
 })();
