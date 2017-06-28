@@ -22,7 +22,20 @@
         controller: 'FinishSubscriptionController',
         controllerAs: 'vm'
       });
-
+    $stateProvider
+      .state('speakers', {
+        url: '/speakers',
+        templateUrl: 'app/speakers/speakers.html',
+        controller: 'SpeakersController',
+        controllerAs: 'vm'  
+      });
+    $stateProvider
+      .state('citic', {
+        url: '/citic',
+        templateUrl: 'app/citic/citic.html',
+        controller: 'CiticController',
+        controllerAs: 'vm'  
+      });
     $stateProvider
       .state('token', {
         url: '/token/:id/:token',
