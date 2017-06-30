@@ -5,10 +5,14 @@
     .module('expotec')
     .factory('CiticService', CiticService);
 
-  CiticService.$inject = ['$http', 'BASE_URL'];
+  CiticService.$inject = [];
 
   /* @ngInject */
-  function CiticService($http, BASE_URL) {
+  function CiticService() {
+    var service = {
 
+    };
+
+    return service;
   }
 })();

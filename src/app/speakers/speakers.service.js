@@ -5,10 +5,14 @@
     .module('expotec')
     .factory('SpeakersService', SpeakersService);
 
-  SpeakersService.$inject = ['$http', 'BASE_URL'];
+  SpeakersService.$inject = [];
 
   /* @ngInject */
-  function SpeakersService($http, BASE_URL) {
+  function SpeakersService() {
+    var service = {
 
+    };
+
+    return service;
   }
 })();
