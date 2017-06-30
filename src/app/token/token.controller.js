@@ -23,7 +23,7 @@
     }
 
     function updatePassword(password) {
-      if (typeof password === 'undefined') { var password = {}; }
+      if (typeof password === 'undefined') { password = {}; }
       password.id = id;
       password.token = token;
 
