@@ -27,14 +27,21 @@
         url: '/speakers',
         templateUrl: 'app/speakers/speakers.html',
         controller: 'SpeakersController',
-        controllerAs: 'vm'  
+        controllerAs: 'vm'
       });
     $stateProvider
       .state('citic', {
         url: '/citic',
         templateUrl: 'app/citic/citic.html',
         controller: 'CiticController',
-        controllerAs: 'vm'  
+        controllerAs: 'vm'
+      });
+    $stateProvider
+      .state('courses', {
+        url: '/courses',
+        templateUrl: 'app/courses/courses.html',
+        controller: 'CoursesController',
+        controllerAs: 'vm'
       });
     $stateProvider
       .state('token', {
