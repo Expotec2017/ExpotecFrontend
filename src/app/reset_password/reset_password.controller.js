@@ -5,10 +5,10 @@
     .module('expotec')
     .controller('ResetPasswordController', ResetPasswordController);
 
-  ResetPasswordController.$inject = ['ResetPasswordService', '$stateParams'];
+  ResetPasswordController.$inject = ['ResetPasswordService', '$stateParams', '$state'];
 
   /* @ngInject */
-  function ResetPasswordController(ResetPasswordService, $stateParams) {
+  function ResetPasswordController(ResetPasswordService, $stateParams, $state) {
     var vm = this;
     var id = null;
     var token = null;

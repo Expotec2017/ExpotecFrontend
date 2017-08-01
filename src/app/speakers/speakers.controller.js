@@ -5,10 +5,10 @@
     .module('expotec')
     .controller('SpeakersController', SpeakersController);
 
-  SpeakersController.$inject = ['SpeakersService', '$state'];
+  SpeakersController.$inject = [];
 
   /* @ngInject */
-  function SpeakersController(SpeakersService, $state) {
+  function SpeakersController() {
 
   }
 })();

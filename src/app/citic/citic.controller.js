@@ -5,10 +5,10 @@
     .module('expotec')
     .controller('CiticController', CiticController);
 
-  CiticController.$inject = ['CiticService', '$state'];
+  CiticController.$inject = [];
 
   /* @ngInject */
-  function CiticController(CiticService, $state) {
+  function CiticController() {
 
   }
 })();
