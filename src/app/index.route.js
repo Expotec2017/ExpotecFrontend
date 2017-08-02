@@ -37,6 +37,13 @@
         controllerAs: 'vm'
       });
     $stateProvider
+      .state('courses', {
+        url: '/courses',
+        templateUrl: 'app/courses/courses.html',
+        controller: 'CoursesController',
+        controllerAs: 'vm'
+      });
+    $stateProvider
       .state('token', {
         url: '/token/:id/:token',
         templateUrl: 'app/token/token.html',
