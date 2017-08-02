@@ -16,7 +16,7 @@
     return service;
 
     function updatePassword(object) {
-      var url = BASE_URL.URL + '/subscription/activate';
+      var url = BASE_URL.URL + '/reset_password';
 
       return $http.post(url, object);
     }
