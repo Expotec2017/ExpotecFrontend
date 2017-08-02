@@ -59,23 +59,20 @@
     }
     #infos_event .details_right {
         max-width: 100%;
-        text-align: center;
-        padding: 80px 0
     }
     #infos_event .details_right h2 {
-        background-color: $color-secundary;
         color: $color-light;
         font-size: 30px;
         text-align: center;
         display: inline-block;
-        padding: 5px 40px;
+        padding: 5px 0px;
     }
     #infos_event .details_right span {
-        font-size: 25px;
+        font-size: 24px;
         display: inline-block;
         color: $color-light;
         background-color: $color-primary;
-        padding: 6px 21px;
+        padding: 1px 14px;
     }
     #subscription #form-subscription{
         width: 560px;
