@@ -1,0 +1,24 @@
+<div smooth-scroll id="forgot-page">
+  <div class="header-inner">
+    <div class="container">
+      <h1>Esqueci minha Senha</h1>
+    </div>
+  </div>
+  <div class="content">
+    <div class="container">
+      <form name="vm.LoginForm" ng-submit="vm.forgot(forgot)" method="post">
+        <div class="row errors">
+          <p class="msg-error" ng-show="vm.errors.message">{{vm.errors.message}}</p>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12" id="div_id_document" ng-class="{'has-error': vm.errors.errors.document}">
+            <input ng-model="forgot.document" ui-br-cpf-mask required id="id_document" name="document" type="text">
+            <label for="id_document" data-error="Dado incorreto" data-success="Dado correto" class="active">CPF</label>
+          </div>
+        </div>
+        <button type="submit">ESQUECI MINHA SENHA</button>
+      </form>
+    </div>
+  </div>
+</div>

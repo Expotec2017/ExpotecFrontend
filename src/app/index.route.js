@@ -71,6 +71,20 @@
         controller: 'CartController',
         controllerAs: 'vm'
       });
+    $stateProvider
+      .state('forgot', {
+        url: '/forgot',
+        templateUrl: 'app/forgot/forgot.html',
+        controller: 'ForgotController',
+        controllerAs: 'vm'
+      });
+    $stateProvider
+      .state('reset_password', {
+        url: '/reset_password/:id/:token',
+        templateUrl: 'app/reset_password/reset_password.html',
+        controller: 'ResetPasswordController',
+        controllerAs: 'vm'
+      });
     $urlRouterProvider.otherwise('/');
   }
 
