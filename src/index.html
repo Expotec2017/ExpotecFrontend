@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Expotec</title>
     <meta name="description" content="">
+    <meta name="theme-color" content="#FFB90d" />
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
@@ -29,9 +30,8 @@
     <nav>
       <div class="container">
         <div class="nav-wrapper">
-          <a href="#" class="brand-logo">EXPOTEC</a>
-
-          <a href="#" data-activates="mobile-demo" class="button-collapse" id="off-canvas"><i class="material-icons">menu</i></a>
+          <a href="#!" class="brand-logo">EXPOTEC</a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="/#">INICIO</a></li>
             <li><a href="/#speakers">PALESTRANTES</a></li>
@@ -49,7 +49,6 @@
         </div>
       </div>
     </nav>
-
 
     <div ui-view></div>
 
@@ -76,6 +75,13 @@
     <!-- endbuild -->
 
     <script type="text/javascript" src="https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
     <!-- <script type="text/javascript" src="https://stc.sandbox.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js"></script> -->
+    <script type="text/javascript">
+        jQuery(document).ready(function(){
+          jQuery(".button-collapse").sideNav();
+        });
+    </script>
   </body>
 </html>
