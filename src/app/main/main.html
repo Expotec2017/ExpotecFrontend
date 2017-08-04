@@ -14,7 +14,7 @@
               <li><a smooth-scroll target="subscription">INSCREVA-SE</a></li>
             </ul>
           </div>
-          
+
         </div>
       </div>
     </div>
@@ -40,19 +40,19 @@
           <div class="row">
             <div class="row">
               <div class="input-field col s12" id="div_id_name">
-                <input ng-model="subscription.person.name" id="id_name" maxlength="255" name="name" type="text" class="validate" required>
-                <label for="id_name" data-error="Dado incorreto" data-success="Dado correto" class="active">Nome Completo*</label>
+                <input ng-model="subscription.person.name" id="id_name" maxlength="255" name="name" type="text" required>
+                <label for="id_name" class="active">Nome Completo*</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12" id="div_id_document">
-                <input ng-model="subscription.person.document" id="id_document" maxlength="255" name="document" type="text" class="validate" ui-br-cpf-mask required>
+                <input ng-model="subscription.person.document" id="id_document" maxlength="255" name="document" type="text" ui-br-cpf-mask required>
                 <label for="id_document" class="active">CPF*</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12" id="div_id_email">
-                <input ng-model="subscription.person.email" id="id_email" maxlength="255" name="email" type="email" class="validate" required>
+                <input ng-model="subscription.person.email" id="id_email" maxlength="255" name="email" type="email" required>
                 <label class="active" for="id_email">E-mail*</label>
               </div>
             </div>
@@ -83,11 +83,11 @@
                   <label for="id_type_street">Tipo da rua*</label>
                 </div>
                 <div id="div_id_street" class="input-field col s6">
-                  <input ng-model="subscription.address.street" id="id_street" maxlength="255" name="street" type="text" class="validate" required/>
+                  <input ng-model="subscription.address.street" id="id_street" maxlength="255" name="street" type="text" required/>
                   <label class="active" for="id_street">Rua*</label>
                 </div>
                 <div id="div_id_neighborhood" class="input-field col s12">
-                  <input ng-model="subscription.address.neighborhood" id="id_neighborhood" maxlength="255" name="neighborhood" type="text" class="validate" required/>
+                  <input ng-model="subscription.address.neighborhood" id="id_neighborhood" maxlength="255" name="neighborhood" type="text" required/>
                   <label class="active" for="id_neighborhood">Bairro*</label>
                 </div>
                 <p style="padding: 5% 2%">{{ vm.address.city.name }} - {{ vm.address.city.state.name }}</p>
@@ -101,11 +101,11 @@
 
             <div class="row">
               <div id="div_id_complement" class="input-field col s6">
-                <input ng-model="subscription.address.complement" id="id_complement" maxlength="255" name="complement" type="text" class="validate" required/>
+                <input ng-model="subscription.address.complement" id="id_complement" maxlength="255" name="complement" type="text" required/>
                 <label class="active" for="id_complement">Complemento</label>
               </div>
               <div id="div_id_number" class="input-field col s6">
-                <input ng-model="subscription.address.number" id="id_number" maxlength="255" name="number" type="text" class="validate" required/>
+                <input ng-model="subscription.address.number" id="id_number" maxlength="255" name="number" type="text" required/>
                 <label class="active" for="id_number">Numero*</label>
               </div>
             </div>
@@ -115,7 +115,7 @@
                 <label for="id_ddd" class="active">DDD*</label>
               </div>
               <div class="input-field col s9" id="div_id_phone">
-                <input ng-model="subscription.phone.number" id="id_phone" maxlength="9" name="number" type="text" class="validate" required />
+                <input ng-model="subscription.phone.number" id="id_phone" maxlength="9" name="number" type="text" required />
                 <label for="id_phone" class="active">Telefone*</label>
               </div>
             </div>
@@ -134,7 +134,7 @@
                 maxlength="255"
                 name="college"
                 type="text"
-                class="validate" />
+                />
                 <label for="id_college" class="active">Instituição</label>
               </div>
             </div>
@@ -147,7 +147,7 @@
                 maxlength="255"
                 name="course"
                 type="text"
-                class="validate" />
+                />
                 <label for="id_course" class="active">Curso</label>
               </div>
             </div>
