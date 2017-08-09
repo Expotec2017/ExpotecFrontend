@@ -8,6 +8,9 @@
     <div class="container">
       <form name="vm.LoginForm" ng-submit="vm.login(login)" method="post">
         <div class="row errors">
+          <p class="msg-error" ng-show="vm.date">{{vm.date}}</p>
+        </div>
+        <div class="row errors">
           <p class="msg-error" ng-show="vm.errors.message">{{vm.errors.message}}</p>
         </div>
 
