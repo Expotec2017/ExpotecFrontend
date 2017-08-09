@@ -37,6 +37,13 @@
         controllerAs: 'vm'
       });
     $stateProvider
+      .state('rooms', {
+        url: '/rooms',
+        templateUrl: 'app/rooms/rooms.html',
+        controller: 'RoomsController',
+        controllerAs: 'vm'
+      });
+    $stateProvider
       .state('courses', {
         url: '/courses',
         templateUrl: 'app/courses/courses.html',
