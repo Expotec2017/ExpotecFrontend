@@ -33,3 +33,6 @@
     }
   }
 })();
+
+SeuServico.funcao()
+  .then(result)
