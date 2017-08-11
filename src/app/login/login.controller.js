@@ -33,6 +33,3 @@
     }
   }
 })();
-
-SeuServico.funcao()
-  .then(result)
